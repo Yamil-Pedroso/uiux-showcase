@@ -10,8 +10,8 @@ export const ProjectsSection = styled.section`
 export const Title = styled.h2`
   margin: 0 auto;
   font-size: 4.3rem;
-  width: 45rem;
-  font-family: "Syne", sans-serif;
+  width: 60rem;
+  font-family: "Krona One", sans-serif;
   color: ${({ theme }) => theme.colors.colorLimeClear};
   margin-bottom: 2rem;
   span {
@@ -81,6 +81,7 @@ export const CardContent = styled.div`
     font-size: 18px;
     margin: 0.5rem 0 0;
     width: 80%;
+    font-family: "Inter", sans-serif;
   }
 
   span {

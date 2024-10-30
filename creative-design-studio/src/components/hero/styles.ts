@@ -16,8 +16,10 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroTitle = styled.h1`
-  font-size: 6.5rem;
+  font-size: 6rem;
   color: ${({ theme }) => theme.colors.colorLimeClear};
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
 `;
 
 export const HeroSubtitle = styled.h2`
