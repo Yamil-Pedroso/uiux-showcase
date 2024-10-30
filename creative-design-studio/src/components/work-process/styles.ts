@@ -1,0 +1,47 @@
+import styled from "styled-components";
+
+export const WorkProcessSection = styled.section`
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+   width: 79.5rem;
+    padding: 100px 0;
+    background-color: #f8f8f8;
+    gap: 20px;
+`;
+
+export const WorkingProcessContainer = styled.div`
+    max-width: 732px;
+    margin: 0 auto;
+    padding: 0 20px;
+`;
+
+export const Title = styled.div`
+     &:nth-child(1) {
+        font-size: 4.375rem;
+     }
+
+    &:nth-child(2) {
+        font-size: 1.3125rem;
+    }
+
+    &:nth-child(3) {
+        font-size: 1.3125rem;
+    }
+`;
+
+export const BrainStorming = styled.div`
+    width: 463px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    `;
+
+export const BrainStormingWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    `;

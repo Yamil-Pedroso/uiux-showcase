@@ -69,7 +69,7 @@ const Projects = () => {
   };
 
   return (
-    <ProjectsSection>
+    <ProjectsSection id="projects">
       <Title>
         Have a wide range of creative projects <span>*</span>
       </Title>

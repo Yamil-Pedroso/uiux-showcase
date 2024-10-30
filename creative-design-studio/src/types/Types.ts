@@ -91,4 +91,38 @@ const projects: IProjects[] = [
   },
 ];
 
-export { navLinks, services, projects };
+const brainStorming: IServices[] = [
+  {
+    id: 1,
+    title: "01/ Project idea",
+    description: "The process starts with a detailed discussion with the client to understand their idea & goals.",
+  },
+  {
+    id: 2,
+    title: "02/ Brainstorming",
+    description: "rainstorming is a group creativity technique in which members attempt to find a conclusion.",
+  },
+  {
+    id: 3,
+    title: "03/ Launch",
+    description: "The completed design assets or final product are delivered with necessary documentation.",
+  },
+];
+
+export interface IWorkProcessing {
+  content: string;
+}
+
+const workProcessing: IWorkProcessing[] = [
+  {
+    content: "Our high-qualityStar working processes",
+  },
+  {
+    content: "We focus at every stage on effective communication and collaboration between the client and ensuring that the final design meets the client s objectives and expectations.",
+  },
+  {
+    content: "It is important to note that these are simplified steps, and the actual work process may vary depending on the complexity of the project.",
+  },
+];
+
+export { navLinks, services, projects, brainStorming, workProcessing };
