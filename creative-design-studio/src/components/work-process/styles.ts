@@ -6,8 +6,7 @@ export const WorkProcessSection = styled.section`
   margin: 0 auto;
    width: 79.5rem;
     padding: 100px 0;
-    background-color: #f8f8f8;
-    gap: 20px;
+    gap: 2rem;
 `;
 
 export const WorkingProcessContainer = styled.div`
@@ -18,7 +17,7 @@ export const WorkingProcessContainer = styled.div`
 
 export const Title = styled.div`
      &:nth-child(1) {
-        font-size: 4.375rem;
+        font-size: 3.7rem;
      }
 
     &:nth-child(2) {

@@ -1,4 +1,5 @@
 
+import { IconType } from "react-icons";
 
 export interface INavLinks {
   id: string;
@@ -21,7 +22,7 @@ export interface IServices {
   id?: number;
   title?: string;
   description?: string;
-  iconOne?: string;
+  iconOne?: string | IconType | React.ReactNode;
   iconTwo?: string;
 }
 
@@ -115,7 +116,7 @@ export interface IWorkProcessing {
 
 const workProcessing: IWorkProcessing[] = [
   {
-    content: "Our high-qualityStar working processes",
+    content: "Our high-quality working processes",
   },
   {
     content: "We focus at every stage on effective communication and collaboration between the client and ensuring that the final design meets the client s objectives and expectations.",
@@ -125,4 +126,50 @@ const workProcessing: IWorkProcessing[] = [
   },
 ];
 
-export { navLinks, services, projects, brainStorming, workProcessing };
+export interface IFeedbacks extends IServices {
+  name?: string;
+  position?: string;
+  avatar?: string;
+  rating?: number | undefined;
+}
+
+const feedbacks: IFeedbacks[] = [
+  {
+    id: 1,
+    rating: 5,
+    title: "Super customer service!",
+    description: "Excellent customer service and I was really impressed and happy with my purchase especially as it was a last minute order which got to me in time, and when it arrived I was very happy with the design and size and so was the recipient.",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Jane Doe",
+    position: "Graphic Designer",
+  },
+  {
+    id: 2,
+    rating: 4,
+    title: "Exceptional creativity and vision",
+    description: "Working Mthemeus was a game-changer for our brand. Their exceptional creativity & vision breathed new life into our visual. The logo they perfectly captures our essence & has become instantly recognizable. We couldn't be happier the results!",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "John Doe",
+    position: "Software Engineer",
+  },
+  {
+    id: 3,
+    rating: 5,
+    title: "Innovative and professional",
+    description: "I can't say enough good things about them. Their team is not only incredibly talented but also highly professional. They listened to our ideas and brought to life in ways we couldn't have imagined. Their innovative approach and dedication to our project.",
+    avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Mila Smith",
+    position: "Product Manager",
+  },
+  {
+    id: 4,
+    rating: 4,
+    title: "Transformed our brand",
+    description: "Our partnership with Mthemeus transformed our brand from ordinary to extraordinary. Their branding expertise and design work elevated our marketing materials to a whole new level. Our customers have taken notice, and boost in brand recognition.",
+    avatar: "https://images.unsplash.com/photo-1509460913899-515f1df34fea?q=80&w=3576&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Alex Johnson",
+    position: "Marketing Manager",
+  },
+];
+
+export { navLinks, services, projects, brainStorming, workProcessing, feedbacks };

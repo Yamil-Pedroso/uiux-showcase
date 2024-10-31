@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from "react";
 import {
   ProjectsSection,
@@ -12,9 +13,9 @@ import {
   NavigationIndicator,
   NavButton,
 } from "./styles";
-import { projects } from "../../types/Types";
+import { projects, IServices } from "../../types/Types";
 
-const Projects = () => {
+const Projects: React.FC<IServices> = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -91,7 +92,11 @@ const Projects = () => {
                   <p>{project.description}</p>
                 </div>
                 <div>
-                  <span>{project.iconOne}</span>
+                <span>
+                    {typeof project.iconOne === "function"
+                      ? React.createElement(project.iconOne)
+                      : project.iconOne}
+                  </span>
                 </div>
               </CardContent>
             </Card>
