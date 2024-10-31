@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Header, NavContainer, Nav, Ul, Li, MyLink } from "./styles";
 import { navLinks } from "../../types/Types";
+import Button from "../common/buttons/Button";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
@@ -30,7 +31,7 @@ const Navbar = () => {
           </Ul>
 
           <div>
-            <button>Sign In</button>
+            <Button title="Get Started" />
           </div>
         </NavContainer>
       </Nav>

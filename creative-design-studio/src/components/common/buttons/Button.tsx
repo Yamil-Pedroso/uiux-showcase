@@ -1,8 +1,13 @@
+import { Btn } from './styles'
 
+interface IButton {
+  title?: string
+  className?: string
+}
 
-const Button = () => {
+const Button: React.FC<IButton> = ({ title, className }) => {
   return (
-    <div>Button</div>
+    <Btn className={className}>{title}</Btn>
   )
 }
 

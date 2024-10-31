@@ -14,7 +14,7 @@ export const NavContainer = styled.div`
     display: flex;
     justify-content: space-between;
      align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 15vw;
     width: 100%;
 
     h1 {
@@ -43,6 +43,7 @@ export const Li = styled.li`
 export const MyLink = styled.a`
     color: ${({ theme }) => theme.colors.colorLimeClear};
     text-decoration: none;
+    font-family: "Inter", sans-serif;
     &:hover {
         color: #f1f1f1;
     }
