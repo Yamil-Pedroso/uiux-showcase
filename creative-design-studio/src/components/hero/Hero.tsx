@@ -11,7 +11,7 @@ import {
 
 const Hero = () => {
   return (
-    <HeroSection>
+    <HeroSection id="home">
       <HeroContent>
         <HeroTitle>A creative design studio </HeroTitle>
         <HeroSubtitle>

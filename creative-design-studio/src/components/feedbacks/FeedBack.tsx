@@ -6,7 +6,7 @@ import { feedbacks, IServices } from '../../types/Types'
 const FeedBack: React.FC<IServices> = () => {
 
   return (
-  <FeedbacksSection>
+  <FeedbacksSection id="feedBack">
     <Title>
       <h2>Clients are always satisfied with us <span>*</span></h2>
     </Title >

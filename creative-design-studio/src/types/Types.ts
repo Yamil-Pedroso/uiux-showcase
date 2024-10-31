@@ -1,5 +1,5 @@
-
 import { IconType } from "react-icons";
+import images from "../assets/images";
 
 export interface INavLinks {
   id: string;
@@ -9,13 +9,12 @@ export interface INavLinks {
 const navLinks: INavLinks[] = [
   { id: "home", item: "Home" },
   { id: "services", item: "Services" },
-  { id: "funFacts", item: "Close clients" },
+  { id: "business", item: "Close clients" },
   { id: "projects", item: "Projects" },
   { id: "workProcess", item: "Work Process" },
   { id: "feedBack", item: "Feedback" },
   { id: "team", item: "Team" },
   { id: "contact", item: "Contact" },
-  { id: "footer", item: "Footer" },
 ];
 
 export interface IServices {
@@ -172,4 +171,31 @@ const feedbacks: IFeedbacks[] = [
   },
 ];
 
-export { navLinks, services, projects, brainStorming, workProcessing, feedbacks };
+const team: IFeedbacks[] = [
+  {
+    id: 1,
+    name: "Jane Doe",
+    position: "Graphic Designer",
+    avatar: images.teamImgOne,
+  },
+  {
+    id: 2,
+    name: "John Doe",
+    position: "Software Engineer",
+    avatar: images.teamImgTwo,
+  },
+  {
+    id: 3,
+    name: "Mila Smith",
+    position: "Product Manager",
+    avatar: images.teamImgThree,
+  },
+  {
+    id: 4,
+    name: "Alex Johnson",
+    position: "Marketing Manager",
+    avatar: images.teamImgFour,
+  },
+];
+
+export { navLinks, services, projects, brainStorming, workProcessing, feedbacks, team };

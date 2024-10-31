@@ -1,3 +1,4 @@
+import React from "react";
 import {
   ServicesSection,
   ServicesHeader,
@@ -14,12 +15,12 @@ import { services, IServices } from "../../types/Types";
 
 const Services: React.FC<IServices> = () => {
   return (
-    <ServicesSection>
+    <ServicesSection id="services">
       <ServicesHeader>Nuestros Servicios</ServicesHeader>
       <CardsContainer>
         {services.map((service, index) => (
           <Card key={index}>
-            <CardIcon>{service.iconOne}</CardIcon>
+            <CardIcon>{typeof service.iconOne === "function" ? React.createElement(service.iconOne) : service.iconOne}</CardIcon>
             <CardTitle>{service.title}</CardTitle>
             <CardDescription>
               Descripción breve del servicio proporcionado.

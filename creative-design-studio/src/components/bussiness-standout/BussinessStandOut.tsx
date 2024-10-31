@@ -15,7 +15,7 @@ import {
 
 const BusinessStandOut = () => {
   return (
-    <Container>
+    <Container id="business">
       <div>
         <TextSection>
           <Title>

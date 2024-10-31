@@ -3,7 +3,7 @@ import { brainStorming, workProcessing } from '../../types/Types'
 
 const WorkProcess = () => {
   return (
-     <WorkProcessSection>
+     <WorkProcessSection id="workProcess">
        <WorkingProcessContainer>
         {workProcessing.map((item, index) => (
           <Title key={index}>
