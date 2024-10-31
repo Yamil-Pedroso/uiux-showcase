@@ -6,7 +6,7 @@ import { FaStar } from "react-icons/fa"
 const Cards: React.FC<IFeedbacks> = ({
   id,
   iconOne,
-   rating,
+  rating = 0,
   title,
   name,
   description,
