@@ -1,3 +1,5 @@
+
+import { useEffect, useRef, useState } from "react";
 import {
   Container,
   TextSection,
@@ -10,13 +12,75 @@ import {
   StatItem,
   StatValue,
   StatDescription,
+  LeftSide,
   RightSide,
 } from "./styles";
 
 const BusinessStandOut = () => {
+  const [startCount, setStartCount] = useState(false);
+  const statRef = useRef<HTMLDivElement>(null) ;
+  const [experience, setExperience] = useState(0);
+  const [projects, setProjects] = useState(0);
+  const [satisfaction, setSatisfaction] = useState(0);
+
+  useEffect(() => {
+    const currentStatRef = statRef.current;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setStartCount(true);
+          } else {
+            // Reinicia los valores cuando el componente sale del viewport
+            setStartCount(false);
+            setExperience(0);
+            setProjects(0);
+            setSatisfaction(0);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (currentStatRef) {
+      observer.observe(currentStatRef);
+    }
+
+    return () => {
+      if (currentStatRef) {
+        observer.unobserve(currentStatRef); 
+      }
+    };
+  }, []);
+
+  // Count Animation
+  useEffect(() => {
+    if (startCount) {
+      let expCount = 0;
+      let projCount = 0;
+      let satCount = 0;
+
+      const interval = setInterval(() => {
+        expCount = Math.min(expCount + 1, 15);
+        projCount = Math.min(projCount + 8, 120);
+        satCount = Math.min(satCount + 5, 100);
+
+        setExperience(expCount);
+        setProjects(projCount);
+        setSatisfaction(satCount);
+
+        if (expCount === 15 && projCount === 120 && satCount === 100) {
+          clearInterval(interval);
+        }
+      }, 50);
+
+      return () => clearInterval(interval);
+    }
+  }, [startCount]);
   return (
-    <Container id="business">
-      <div>
+    <Container id="business" ref={statRef}>
+      <LeftSide>
         <TextSection>
           <Title>
             We make your <span>*</span> business stand out
@@ -29,7 +93,7 @@ const BusinessStandOut = () => {
           />
           <PlayButton>Play</PlayButton>
         </VideoContainer>
-      </div>
+      </LeftSide>
 
       <RightSide>
         <Subtitle>
@@ -38,15 +102,31 @@ const BusinessStandOut = () => {
         </Subtitle>
         <StatsPanel>
           <StatItem>
-            <StatValue>15+</StatValue>
+            <StatValue>{experience}+</StatValue>
             <StatDescription>Years of experience</StatDescription>
           </StatItem>
+          <div
+            style={{
+              width: "80%",
+              height: "1px",
+              backgroundColor: "#696969",
+              margin: "0 2rem",
+            }}
+          />
           <StatItem>
-            <StatValue>120k</StatValue>
+            <StatValue>{projects}k</StatValue>
             <StatDescription>Successful projects</StatDescription>
           </StatItem>
+          <div
+            style={{
+              width: "80%",
+              height: "1px",
+              backgroundColor: "#696969",
+              margin: "0 2rem",
+            }}
+          />
           <StatItem>
-            <StatValue>100%</StatValue>
+            <StatValue>{satisfaction}%</StatValue>
             <StatDescription>Client satisfaction rate</StatDescription>
           </StatItem>
         </StatsPanel>

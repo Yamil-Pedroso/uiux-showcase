@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const ProjectsSection = styled.section`
+  margin-top: 10rem;
   width: 100%;
   padding: 5rem 0;
   height: 55rem;

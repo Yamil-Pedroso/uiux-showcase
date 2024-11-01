@@ -15,9 +15,42 @@ export const HeroContent = styled.div`
   justify-content: center;
   width: 50%;
   margin-top: -10rem;
+  position: relative;
 
   * {
     margin-bottom: 1rem;
+  }
+
+  .hero-arrow {
+    position: absolute;
+    bottom: 0;
+    right: -3rem;
+    width: 13rem;
+    height: 13rem;
+    transform: rotate(130deg);
+    animation: moveLeftRight 3.5s infinite ease-in-out;
+
+    @keyframes moveLeftRight {
+      0% {
+        transform: rotate(125deg) translateX(0);
+      }
+      50% {
+        transform: rotate(125deg) translateX(1rem); 
+      }
+      100% {
+        transform: rotate(125deg) translateX(0);
+      }
+    }
+  }
+
+  .hero-btn {
+    display: flex;
+     padding: 0 .8rem 0rem 2rem;
+
+    .icon {
+      margin-top: 1rem;
+      margin-left: 2rem;
+    }
   }
 `;
 
@@ -106,4 +139,14 @@ export const HeroImage = styled.div`
     height: 100%;
     object-fit: cover;
   }
+`;
+
+export const TelWrapper = styled.div`
+   display: flex;
+   align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+     background-color: ${({ theme }) => theme.colors.bgBlack};
 `;

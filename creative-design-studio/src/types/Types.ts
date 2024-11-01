@@ -1,5 +1,6 @@
 import { IconType } from "react-icons";
 import images from "../assets/images";
+import { FaRegImage, FaArrowRight } from "react-icons/fa";
 
 export interface INavLinks {
   id: string;
@@ -22,37 +23,37 @@ export interface IServices {
   title?: string;
   description?: string;
   iconOne?: string | IconType | React.ReactNode;
-  iconTwo?: string;
+  iconTwo?: string | IconType | React.ReactNode;
 }
 
 const services: IServices[] = [
   {
     id: 1,
-    title: "Service 1",
-    description: "Description of the service provided.",
-    iconOne: "😀",
-    iconTwo: "🔧",
+    title: "UI/UX Design",
+    description: "Focusing on user interface (UI) and user experience (UX) design enhance the usability and accessibility of digital products & app.",
+    iconOne: FaRegImage,
+    iconTwo: FaArrowRight,
   },
   {
     id: 2,
-    title: "Service 2",
-    description: "Description of the service provided.",
-    iconOne: "😀",
-    iconTwo: "🔧",
+    title: "Graphic Design",
+    description: "Creating visual elements such as logos, branding materials, page layout techniques, brochures, & other marketing collateral.",
+    iconOne: FaRegImage,
+    iconTwo: FaArrowRight,
   },
   {
     id: 3,
-    title: "Service 3",
-    description: "Description of the service provided.",
-    iconOne: "😀",
-    iconTwo: "🔧",
+    title: "Web Design",
+    description: "Designing and developing websites to ensure they are visually look and appealing, user-friendly, and functional your website.",
+    iconOne: FaRegImage,
+    iconTwo: FaArrowRight,
   },
   {
     id: 4,
-    title: "Service 4",
-    description: "Description of the service provided.",
-    iconOne: "😀",
-    iconTwo: "🔧",
+    title: "Motion Graphics",
+    description: "Creating animate graphics, videos for various purposes, including marketing and entertainment. To help sell a product or service.",
+    iconOne: FaRegImage,
+    iconTwo: FaArrowRight,
   },
 ];
 

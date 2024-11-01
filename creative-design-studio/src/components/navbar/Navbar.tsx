@@ -31,7 +31,9 @@ const Navbar = () => {
           </Ul>
 
           <div>
-            <Button title="Get Started" />
+            <Button
+             style={{ padding: "1rem 2rem" }}
+            >Get Started</Button>
           </div>
         </NavContainer>
       </Nav>

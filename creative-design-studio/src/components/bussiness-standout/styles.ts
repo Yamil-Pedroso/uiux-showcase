@@ -4,18 +4,21 @@ export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  margin-top: 10rem;
+`;
+
+export const LeftSide = styled.div`
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
 `;
-
 export const TextSection = styled.div`
-  
 `;
 
-export const Title = styled.h1`
-  font-size: 2.5rem;
+export const Title = styled.h2`
+  width: 60rem;
+  font-size: 4rem;
   font-weight: bold;
-  width: 25rem;
   color: ${({ theme }) => theme.colors.primaryText};
   span {
     color: ${({ theme }) => theme.colors.bgGreen};
@@ -24,36 +27,40 @@ export const Title = styled.h1`
 
 
 export const VideoContainer = styled.div`
+  width: 51rem;
+  height: 29rem;
   position: relative;
-  max-width: 600px;
-  border-radius: 10px;
+  border-radius: 1.2rem;
+  border: 5px solid #000;
   overflow: hidden;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   `;
 
 export const VideoImage = styled.img`
   width: 100%;
-  height: auto;
-  border-radius: 10px;
-  `;
+  height: 100%;
+  object-fit: cover;
+`;
 
 export const PlayButton = styled.button`
   position: absolute;
-  bottom: 10%;
-  left: 10%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 0.5rem 1rem;
   font-size: 1rem;
   color: ${({ theme }) => theme.colors.buttonText};
-  background-color: ${({ theme }) => theme.colors.buttonBackground};
-  border: none;
+  background-color: ${({ theme }) => theme.colors.bgGreen};
+  border: 2px solid #000;
   border-radius: 20px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 0px ${({ theme }) => theme.colors.colorLimeClear};
+  transition: all 0.5s ease;
   
   &:hover {
-    background-color: ${({ theme }) => theme.colors.buttonHover};
+    box-shadow: none;
   }
   
   &::before {
@@ -66,30 +73,35 @@ export const PlayButton = styled.button`
 export const RightSide = styled.div`
   display: flex;
   flex-direction: column;
-
-  gap: 2rem;
+  gap: 6.5rem;
+  margin-top: 4rem;
 `;
 
 export const Subtitle = styled.p`
-  font-size: 1rem;
+  font-size: 1.3125rem;
+  width: 26rem;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
   color: ${({ theme }) => theme.colors.secondaryText};
-  width: 20rem;
 `;
 export const StatsPanel = styled.div`
-  flex: 1;
+   width: 22rem;
+   height: 25rem;
+   padding: 1.8rem;
   background-color: ${({ theme }) => theme.colors.bgBlack};
   color: ${({ theme }) => theme.colors.panelText};
-  padding: 2rem;
-  border-radius: 10px;
+  border-radius: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  justify-content: space-around;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
 export const StatItem = styled.div`
   text-align: center;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const StatValue = styled.p`
@@ -100,7 +112,8 @@ export const StatValue = styled.p`
 `;
 
 export const StatDescription = styled.p`
-  font-size: 1rem;
+  font-size: 1.125rem;
+  font-family: "Inter", sans-serif;
   color: ${({ theme }) => theme.colors.colorLimeClear};
   margin: 0;
 `;

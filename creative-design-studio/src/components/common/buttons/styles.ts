@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const Btn = styled.button`
-   padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: ${({ theme }) => theme.colors.bgGreen};
     border-radius: 3rem;
     border: 2px solid #000;
