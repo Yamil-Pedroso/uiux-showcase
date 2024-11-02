@@ -35,7 +35,7 @@ export const HeroContent = styled.div`
         transform: rotate(125deg) translateX(0);
       }
       50% {
-        transform: rotate(125deg) translateX(1rem); 
+        transform: rotate(125deg) translateX(1rem);
       }
       100% {
         transform: rotate(125deg) translateX(0);
@@ -130,7 +130,7 @@ export const HeroImageContainer = styled.div`
 export const HeroImage = styled.div`
   width: 30rem;
   height: 33rem;
-  border: 3px solid ${({ theme }) => theme.colors.colorLimeClear};
+  border: 5px solid ${({ theme }) => theme.colors.colorLimeClear};
   border-radius: 1rem;
   overflow: hidden;
 
