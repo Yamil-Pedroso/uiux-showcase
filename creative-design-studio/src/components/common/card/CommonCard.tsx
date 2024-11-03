@@ -26,7 +26,7 @@ const CommonCard = forwardRef<HTMLDivElement, ITeamCard>(({ id, avatar, name, po
               socialNetworks.map((Icon, index) => {
                 if (typeof Icon === "function") {
                   const IconComponent = Icon as IconType;
-                  return <IconComponent key={index} size={24} />;
+                  return <IconComponent className="social" key={index} size={24} />;
                 }
                 return <span key={index}>{Icon}</span>;
               })}

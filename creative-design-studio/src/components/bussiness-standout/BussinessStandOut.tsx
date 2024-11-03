@@ -14,8 +14,12 @@ import {
   StatDescription,
   LeftSide,
   RightSide,
+  Overlay
 } from "./styles";
 import { verticalConfig } from "../../animations/variants";
+import { FaStarOfLife } from "react-icons/fa";
+import Video from "../common/media/Video";
+import { agencyVideo } from "../../assets/media";
 
 const BusinessStandOut = () => {
   const [startCount, setStartCount] = useState(false);
@@ -23,6 +27,11 @@ const BusinessStandOut = () => {
   const [experience, setExperience] = useState(0);
   const [projects, setProjects] = useState(0);
   const [satisfaction, setSatisfaction] = useState(0);
+  const [clickPlay, setClickPlay] = useState(false)
+
+  const handleClick = () => {
+     setClickPlay(prev => !prev)
+  }
 
   useEffect(() => {
     const currentStatRef = statRef.current;
@@ -84,19 +93,31 @@ const BusinessStandOut = () => {
       <LeftSide>
         <TextSection>
           <Title>
-            We make your <span>*</span> business stand out
+            We make your <span>
+              <FaStarOfLife size={58} className="icon" />
+              </span> business stand out
           </Title>
         </TextSection>
+        <Overlay isActive={clickPlay} />
         <VideoContainer
           {...verticalConfig}
         >
           <VideoImage
 
-            src="https://images.unsplash.com/photo-1481887328591-3e277f9473dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8RGVzaWduJTIwYWdlbmN5fGVufDB8fDB8fHww"
+            src="https://img.freepik.com/free-photo/people-working-together-animation-studio_23-2149208004.jpg?t=st=1730630471~exp=1730634071~hmac=6486324be78feba762b8a8006b7f4eac34a38a83a1565f7d839773245d2d83f8&w=2000"
             alt=""
           />
-          <PlayButton>Play</PlayButton>
+          <PlayButton
+            onClick={handleClick}
+          >Play</PlayButton>
         </VideoContainer>
+        <Video
+          {...verticalConfig}
+          style={{
+             display: clickPlay ? "block" : "none"
+          }}
+         className="video"
+        src={agencyVideo} />
       </LeftSide>
 
       <RightSide>

@@ -36,7 +36,7 @@ const Team = () => {
 
       <TeamContainer>
         <h2>
-          We have a team of creative people <span><FaStarOfLife size={48} className="icon"/></span>
+          We have a team of creative people {" "}<span><FaStarOfLife size={58} className="icon"/></span>
         </h2>
       </TeamContainer>
 

@@ -55,7 +55,7 @@ export const TeamContainer = styled.div`
   margin-top: 6rem;
 
   h2 {
-    width: 40vw;
+    width: 45.5rem;
     font-size: 3.7rem;
     text-align: center;
 
@@ -118,7 +118,7 @@ export const TeamCard = styled(CommonCard)`
   font-size: 2rem;
   top: 13rem;
   color: black;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: ${({ theme }) => theme.colors.bgGreen};
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   opacity: 0;
@@ -126,6 +126,11 @@ export const TeamCard = styled(CommonCard)`
   transition: opacity 0.3s ease, transform 0.5s ease;
   pointer-events: none;
   z-index: 1;
+
+  .social {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
 }
 
 &:hover .hover-name {

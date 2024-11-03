@@ -189,14 +189,14 @@ const team: ITeam[] = [
   },
   {
     id: 2,
-    name: "John Doe",
+    name: "Mia Garcia",
     position: "Software Engineer",
     avatar: images.teamImgTwo,
     socialNetworks: [FaFacebookF, FaTwitter, FaLinkedin, FaInstagram],
   },
   {
     id: 3,
-    name: "Mila Smith",
+    name: "Mike Smith",
     position: "Product Manager",
     avatar: images.teamImgThree,
     socialNetworks: [FaFacebookF, FaTwitter, FaLinkedin, FaInstagram],

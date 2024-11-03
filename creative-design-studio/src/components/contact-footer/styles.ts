@@ -44,7 +44,7 @@ export const LeftSide = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 4rem;
+  font-size: 3.6rem;
   font-weight: 400;
   margin: 2rem 0;
 
@@ -70,6 +70,10 @@ export const Tel = styled.p`
   font-weight: 300;
   font-family: "Inter", sans-serif;
   margin: 1rem 0;
+
+   span:first-child {
+    color: ${({ theme }) => theme.colors.bgGreen};
+  }
 `;
 
 export const Email = styled.p`
@@ -80,6 +84,10 @@ export const Email = styled.p`
   font-weight: 300;
   font-family: "Inter", sans-serif;
   margin: 2rem 0;
+
+  span:first-child {
+    color: ${({ theme }) => theme.colors.bgGreen};
+  }
 `;
 
 export const SocialMedia = styled.div`

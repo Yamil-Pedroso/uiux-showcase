@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+interface IOverlay {
+  isActive: boolean
+}
+
 export const Container = styled.section`
   display: flex;
   align-items: center;
@@ -8,10 +12,32 @@ export const Container = styled.section`
   margin-top: 10rem;
 `;
 
+ export const Overlay = styled.div<IOverlay>`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+  display: ${({ isActive }: { isActive: boolean }) => (isActive ? "block" : "none")};
+`;
+
 export const LeftSide = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  position: relative;
+
+  .video {
+    width: 30rem;
+    height: 26rem;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
 `;
 export const TextSection = styled.div`
 `;
