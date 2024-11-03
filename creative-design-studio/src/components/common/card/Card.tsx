@@ -1,9 +1,10 @@
-import React from "react"
+import  React, { forwardRef } from "react";
 import { CardContainer, Card } from "./styles"
 import { IFeedbacks } from "../../../types/Types"
 import { FaStar } from "react-icons/fa"
+import { motion } from "framer-motion";
 
-const Cards: React.FC<IFeedbacks> = ({
+const Cards = forwardRef<HTMLDivElement, IFeedbacks>(({
   id,
   iconOne,
   rating = 0,
@@ -12,9 +13,11 @@ const Cards: React.FC<IFeedbacks> = ({
   description,
   avatar,
   position,
-}) => {
+}, ref) => {
   return (
-    <CardContainer>
+    <CardContainer
+     ref={ref}
+    >
       <Card key={id}>
         <div
           style={{
@@ -59,6 +62,8 @@ const Cards: React.FC<IFeedbacks> = ({
       </Card>
     </CardContainer>
   )
-}
+} )
 
-export default Cards
+const MotionCard = motion(Cards)
+
+export default MotionCard

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const Container = styled.section`
   display: flex;
@@ -26,7 +27,7 @@ export const Title = styled.h2`
 `;
 
 
-export const VideoContainer = styled.div`
+export const VideoContainer = styled(motion.div)`
   width: 51rem;
   height: 29rem;
   position: relative;
@@ -36,7 +37,7 @@ export const VideoContainer = styled.div`
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   `;
 
-export const VideoImage = styled.img`
+export const VideoImage = styled(motion.img)`
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -58,11 +59,11 @@ export const PlayButton = styled.button`
   cursor: pointer;
   box-shadow: 3px 3px 0px ${({ theme }) => theme.colors.colorLimeClear};
   transition: all 0.5s ease;
-  
+
   &:hover {
     box-shadow: none;
   }
-  
+
   &::before {
     content: '▶';
     font-size: 1.2rem;

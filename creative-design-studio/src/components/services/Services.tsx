@@ -11,6 +11,7 @@ import {
 } from "./styles";
 import { services, IServices } from "../../types/Types";
 import { FaStarOfLife } from "react-icons/fa";
+import { containerVariants, animationConfig, itemVariants } from "../../animations/variants";
 
 const Services: React.FC<IServices> = () => {
   return (
@@ -23,9 +24,14 @@ const Services: React.FC<IServices> = () => {
           </span>
         </h2>
       </ServicesHeader>
-      <CardsContainer>
+      <CardsContainer
+         variants={containerVariants}
+         {...animationConfig}
+      >
         {services.map((service, index) => (
-            <Card key={index}>
+            <Card
+              variants={itemVariants}
+              key={index}>
               <CardIcon>
                 {typeof service.iconOne === "function"
                   ? React.createElement(service.iconOne)
@@ -41,7 +47,7 @@ const Services: React.FC<IServices> = () => {
                   : service.iconTwo
                 }</CardFooterIcon>
             </Card>
-         
+
         ))}
       </CardsContainer>
     </ServicesSection>

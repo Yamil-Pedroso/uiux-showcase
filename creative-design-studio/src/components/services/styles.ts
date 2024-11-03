@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const ServicesSection = styled.section`
   padding: 2rem;
@@ -25,7 +26,7 @@ export const ServicesHeader = styled.div`
   }
 `;
 
-export const CardsContainer = styled.div`
+export const CardsContainer = styled(motion.div)`
   width: 90%;
   max-width: 90rem;
   margin: 0 auto;
@@ -35,7 +36,7 @@ export const CardsContainer = styled.div`
   gap: 1rem
 `;
 
-export const Card = styled.div`
+export const Card = styled(motion.div)`
   width: 35rem;
   height: 18rem;
   padding: 2rem;
@@ -48,7 +49,7 @@ export const Card = styled.div`
   &:hover {
     background-color: ${({ theme }) => theme.colors.bgGreen};
     box-shadow: .3rem .3rem 1px  #000000;
-  }  
+  }
 `;
 
 export const CardIcon = styled.div`

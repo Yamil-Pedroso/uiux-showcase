@@ -1,6 +1,8 @@
 import { IconType } from "react-icons";
 import images from "../assets/images";
-import { FaRegImage, FaArrowRight } from "react-icons/fa";
+import { FaRegImage, FaArrowRight, FaFacebookF, FaTwitter, FaLinkedin, FaInstagram
+
+ } from "react-icons/fa";
 
 export interface INavLinks {
   id: string;
@@ -119,7 +121,7 @@ const workProcessing: IWorkProcessing[] = [
     content: "Our high-quality working processes",
   },
   {
-    content: "We focus at every stage on effective communication and collaboration between the client and ensuring that the final design meets the client s objectives and expectations.",
+    content: "We focus at every stage on effective communication and collaboration between the client and ensuring that the final design meets the client objectives and expectations.",
   },
   {
     content: "It is important to note that these are simplified steps, and the actual work process may vary depending on the complexity of the project.",
@@ -172,30 +174,39 @@ const feedbacks: IFeedbacks[] = [
   },
 ];
 
-const team: IFeedbacks[] = [
+interface ITeam extends IFeedbacks {
+  id: number;
+  socialNetworks?: string[] | IconType[] | React.ReactNode[];
+}
+
+const team: ITeam[] = [
   {
     id: 1,
     name: "Jane Doe",
     position: "Graphic Designer",
     avatar: images.teamImgOne,
+    socialNetworks: [FaFacebookF, FaTwitter, FaLinkedin, FaInstagram],
   },
   {
     id: 2,
     name: "John Doe",
     position: "Software Engineer",
     avatar: images.teamImgTwo,
+    socialNetworks: [FaFacebookF, FaTwitter, FaLinkedin, FaInstagram],
   },
   {
     id: 3,
     name: "Mila Smith",
     position: "Product Manager",
     avatar: images.teamImgThree,
+    socialNetworks: [FaFacebookF, FaTwitter, FaLinkedin, FaInstagram],
   },
   {
     id: 4,
     name: "Alex Johnson",
     position: "Marketing Manager",
     avatar: images.teamImgFour,
+    socialNetworks: [FaFacebookF, FaTwitter, FaLinkedin, FaInstagram],
   },
 ];
 

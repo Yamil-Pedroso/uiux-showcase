@@ -11,7 +11,6 @@ export const ContactFooterSection = styled.section`
 export const Content = styled.div`
   display: flex;
   padding: 5rem;
-  width: 50vw;
   color: ${({ theme }) => theme.colors.colorLimeClear};
 `;
 
@@ -19,15 +18,14 @@ export const LeftSide = styled.div`
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  position: relative;
+
 
   img {
     width: 14.5rem;
     height: 14.5rem;
     margin-top: 2rem;
     position: absolute;
-    bottom: 4rem;
-    right: 10rem;
+
     transform: rotate(130deg);
     animation: moveLeftRight 3s infinite;
 
@@ -36,7 +34,7 @@ export const LeftSide = styled.div`
         transform: rotate(125deg) translateY(0);
       }
       50% {
-        transform: rotate(125deg) translateY(-2rem); 
+        transform: rotate(125deg) translateY(-2rem);
       }
       100% {
         transform: rotate(125deg) translateY(0);
@@ -49,7 +47,6 @@ export const Title = styled.h1`
   font-size: 4rem;
   font-weight: 400;
   margin: 2rem 0;
-  width: 30vw;
 
   span {
     color: ${({ theme }) => theme.colors.bgGreen};
@@ -119,5 +116,26 @@ export const RightSide = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    input {
+      width: 30rem;
+      padding: 1rem;
+      border: 2px solid #fff;
+      border-radius: 3rem;
+      background-color: #000;
+      color: #fff;
+      outline: none;
+    }
+
+    textarea {
+      width: 30rem;
+      height: 10rem;
+      padding: 1rem;
+      color: #fff;
+      border: 2px solid #fff;
+      background-color: #000;
+      border-radius: 2rem;
+      outline: none;
+    }
   }
 `;

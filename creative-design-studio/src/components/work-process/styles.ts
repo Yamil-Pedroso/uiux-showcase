@@ -1,12 +1,10 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const WorkProcessSection = styled.section`
   display: flex;
   justify-content: center;
-    margin: 0 auto;
-   width: 60rem;
-    padding: 100px 0;
-    gap: 8rem;
+  margin-top: 5rem;
 `;
 
 export const WorkingProcessContainer = styled.div`
@@ -26,32 +24,36 @@ export const Toggle = styled.div`
 `;
 
 export const Title = styled.div`
-         width: 50rem;
+         width: 55rem;
+         position: relative;
      > p {
          margin: 1.5rem;
      }
      &:nth-child(1) {
         font-size: 3.7rem;
+
      }
 
     &:nth-child(2) {
         font-size: 1.3125rem;
         font-family: "Inter", sans-serif;
+        width: 48rem;
     }
 
     &:nth-child(3) {
         font-size: 1.3125rem;
         font-family: "Inter", sans-serif;
+        width: 48rem;
 
     }
 `;
 
-export const BrainStorming = styled.div`
+export const BrainStorming = styled(motion.div)`
   margin-top: 2rem;
 
 `;
 
-export const BrainStormingWrapper = styled.div`
+export const BrainStormingWrapper = styled(motion.div)`
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -1,20 +1,21 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const HeroSection = styled.section`
+export const HeroSection = styled(motion.section)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4rem 12vw;
+  padding: 4rem 12vw 0 12vw;
   height: 49rem;
   background-color: ${({ theme }) => theme.colors.bgBlack};
 `;
 
-export const HeroContent = styled.div`
+export const HeroContent = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 50%;
-  margin-top: -10rem;
+  margin-top: -6rem;
   position: relative;
 
   * {
@@ -54,7 +55,7 @@ export const HeroContent = styled.div`
   }
 `;
 
-export const HeroTitle = styled.h1`
+export const HeroTitle = styled(motion.h1)`
   font-size: 5.2rem;
   width: 50vw;
   color: ${({ theme }) => theme.colors.colorLimeClear};
@@ -66,7 +67,7 @@ export const HeroTitle = styled.h1`
 }
 `;
 
-export const HeroSubtitle = styled.h2`
+export const HeroSubtitle = styled(motion.h2)`
   font-size: 1.3125rem;
   font-family: "Inter", sans-serif;
   font-weight: 200;
@@ -74,7 +75,7 @@ export const HeroSubtitle = styled.h2`
 
 `;
 
-export const People = styled.div`
+export const People = styled(motion.div)`
     display: flex;
     font-family: "Inter", sans-serif;
     padding: 1rem;
@@ -123,7 +124,7 @@ export const HeroButton = styled.button`
   }
 `;
 
-export const HeroImageContainer = styled.div`
+export const HeroImageContainer = styled(motion.div)`
 
 `;
 

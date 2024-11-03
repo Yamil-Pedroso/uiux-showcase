@@ -1,3 +1,4 @@
+
 import {
   HeroSection,
   HeroContent,
@@ -11,6 +12,8 @@ import Button from "../common/buttons/Button";
 import { FaStarOfLife } from "react-icons/fa";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import images from "../../assets/images";
+import { motion } from "framer-motion";
+import { containerVariants, itemVariants, animationConfig, heroImageContainerVariants } from "../../animations/variants";
 
 const persons = [
   {
@@ -25,23 +28,62 @@ const persons = [
 ];
 
 const Hero = () => {
+  //const controls = useAnimation();
+  //const heroRef = useRef(null);
+//
+  //useEffect(() => {
+  //  const observer = new IntersectionObserver(
+  //    (entries) => {
+  //      entries.forEach((entry) => {
+  //        if (entry.isIntersecting) {
+  //          controls.start({ opacity: 1, y: 0 });
+  //        } else {
+  //          controls.start({ opacity: 0, y: 100 });
+  //        }
+  //      });
+  //    },
+  //    { threshold: 0.5 } // Ajusta el umbral según prefieras
+  //  );
+//
+  //  if (heroRef.current) {
+  //    observer.observe(heroRef.current);
+  //  }
+//
+  //  return () => {
+  //    if (heroRef.current) {
+  //      observer.unobserve(heroRef.current);
+  //    }
+  //  };
+  //}, [controls]);
+
+
   return (
-    <HeroSection id="home">
-      <HeroContent>
-        <img src={images.curveArrow} alt="curved arrow" className="hero-arrow" />
-        <HeroTitle>
+    <HeroSection id="home"
+    >
+      <HeroContent
+       variants={containerVariants}
+       {...animationConfig}
+      >
+
+        <HeroTitle
+           variants={itemVariants}
+        >
           A creative{" "}
           <span>
             <FaStarOfLife size={58} className="icon" />
           </span>
           design studio
         </HeroTitle>
-        <HeroSubtitle>
+        <HeroSubtitle
+          variants={itemVariants}
+        >
           We're a creative design studio specializing in meeting the needs of
           the new generation. We offer innovative and cutting-edge design
           solutions to help our clients stand out in today's fast-paced.
         </HeroSubtitle>
-        <People>
+        <People
+          variants={itemVariants}
+        >
           <div className="content">
             {persons.map((person, index) => (
               <div
@@ -62,16 +104,18 @@ const Hero = () => {
           </div>
           <p>Believed by more than a thousand people</p>
         </People>
-        <div
+        <motion.div
+          variants={itemVariants}
           style={{
             display: "flex",
             position: "relative",
           }}
         >
-          <Button className="hero-btn">
+          <Button
+          className="hero-btn">
             Book a free consultation
             <BsFillTelephoneFill
-             style={{ 
+             style={{
                padding: "1rem",
                 borderRadius: "50%",
                backgroundColor: "black",
@@ -79,11 +123,14 @@ const Hero = () => {
              size={20} color="white"
              className="icon"
               />
+               <img src={images.curveArrow} alt="curved arrow" className="hero-arrow" />
           </Button>
-        </div>
+        </motion.div>
       </HeroContent>
 
-      <HeroImageContainer>
+      <HeroImageContainer
+        {...heroImageContainerVariants}
+      >
         <HeroImage>
           <img
             src="https://as2.ftcdn.net/v2/jpg/09/25/50/83/1000_F_925508383_JNq0anb1JAm7EUYJ3ULbd2PPzZhrNVnF.jpg"

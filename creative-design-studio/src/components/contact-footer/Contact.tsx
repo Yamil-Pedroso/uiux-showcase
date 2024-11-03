@@ -13,6 +13,7 @@ import { FaTwitter, FaFacebookF, FaStarOfLife } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaLinkedinIn } from "react-icons/fa6";
 import images from "../../assets/images";
+import Button from "../common/buttons/Button";
 
 const Contact = () => {
   return (
@@ -56,11 +57,10 @@ const Contact = () => {
           <form>
             <input type="text" placeholder="Name" />
             <input type="email" placeholder="Email" />
+            <input type="tel" placeholder="Phone" />
             <textarea placeholder="Message"></textarea>
-            <button>Send</button>
+            <Button>Send</Button>
           </form>
-
-          <button>Send us a message</button>
         </RightSide>
       </Content>
     </ContactFooterSection>

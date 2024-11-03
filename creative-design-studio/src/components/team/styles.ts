@@ -66,6 +66,7 @@ export const TeamContainer = styled.div`
 `;
 
 export const TeamCard = styled(CommonCard)`
+  position: relative;
   .container {
     padding: 2rem;
     gap: 1rem;
@@ -91,6 +92,11 @@ export const TeamCard = styled(CommonCard)`
       height: 100%;
       object-fit: cover;
       display: block;
+      transition: transform 0.5s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -106,4 +112,52 @@ export const TeamCard = styled(CommonCard)`
     text-align: center;
     font-weight: 600;
   }
+
+  .hover-name {
+  position: absolute;
+  font-size: 2rem;
+  top: 13rem;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transform: translateY(50%);
+  transition: opacity 0.3s ease, transform 0.5s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+&:hover .hover-name {
+  animation: appearDownToUp 0.5s ease forwards;
+  opacity: 1;
+}
+
+&:not(:hover) .hover-name {
+  animation: disappearUpToDown 0.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes appearDownToUp {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes disappearUpToDown {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+}
+
 `;

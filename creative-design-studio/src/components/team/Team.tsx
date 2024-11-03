@@ -1,9 +1,13 @@
+
 import { TeamSection, AdBanner, BannerContent, TeamContainer, TeamCard } from "./styles";
 import Marquee from "react-marquee-slider";
 import { FaStarOfLife } from "react-icons/fa";
 import { team } from "../../types/Types";
+import { motion } from "framer-motion";
+import { animationConfig, containerVariants, itemVariants } from "../../animations/variants";
 
 const Team = () => {
+
   return (
     <TeamSection id="team">
       <AdBanner>
@@ -36,26 +40,32 @@ const Team = () => {
         </h2>
       </TeamContainer>
 
-     <div
+     <motion.div
+       variants={containerVariants}
+       {...animationConfig}
         style={{
           display: "flex",
           justifyContent: "center",
           flexWrap: "wrap",
           gap: "2rem",
+          position: "relative",
         }}
      >
       {
         team.map((item) => (
-          <TeamCard
-            key={item.id}
-            name={item.name}
-            position={item.position}
-            avatar={item.avatar}
-          />
+          <>
+            <TeamCard
+              key={item.id}
+              variants={itemVariants}
+              name={item.name}
+              position={item.position}
+              avatar={item.avatar}
+              socialNetworks={item.socialNetworks}
+            />
+          </>
         ))
       }
-
-     </div>
+     </motion.div>
     </TeamSection>
   );
 };

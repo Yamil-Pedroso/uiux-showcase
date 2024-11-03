@@ -15,6 +15,7 @@ import {
   LeftSide,
   RightSide,
 } from "./styles";
+import { verticalConfig } from "../../animations/variants";
 
 const BusinessStandOut = () => {
   const [startCount, setStartCount] = useState(false);
@@ -49,7 +50,7 @@ const BusinessStandOut = () => {
 
     return () => {
       if (currentStatRef) {
-        observer.unobserve(currentStatRef); 
+        observer.unobserve(currentStatRef);
       }
     };
   }, []);
@@ -86,8 +87,11 @@ const BusinessStandOut = () => {
             We make your <span>*</span> business stand out
           </Title>
         </TextSection>
-        <VideoContainer>
+        <VideoContainer
+          {...verticalConfig}
+        >
           <VideoImage
+
             src="https://images.unsplash.com/photo-1481887328591-3e277f9473dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8RGVzaWduJTIwYWdlbmN5fGVufDB8fDB8fHww"
             alt=""
           />

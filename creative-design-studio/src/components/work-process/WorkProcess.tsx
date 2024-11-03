@@ -3,6 +3,8 @@ import { WorkProcessSection, WorkingProcessContainer, BrainStormingWrapper, Brai
 import { brainStorming, workProcessing } from '../../types/Types'
 import { IoIosArrowDown } from "react-icons/io";
 import { theme } from '../../styles/theme';
+import { FaStarOfLife } from "react-icons/fa";
+import { containerVariants, animationConfig, itemVariants } from "../../animations/variants";
 
 const WorkProcess = () => {
   const [ togleIndex, setTogleIndex ] = useState<number | null>(null)
@@ -16,18 +18,26 @@ const WorkProcess = () => {
        <WorkingProcessContainer>
         {workProcessing.map((item, index) => (
           <Title key={index}>
-            <p>{item.content}</p>
+            <p>{item.content}
+              {
+                index === 0 && <FaStarOfLife style={{
+                  color: `${theme.colors.bgGreen}`,
+                  position: "absolute",
+                  top: ".7rem",
+                  right: "9.5rem",
+                }} />
+              }
+            </p>
           </Title>
         ))}
        </WorkingProcessContainer>
 
         <BrainStorming
-          style={{
-
-          }}
+           variants={containerVariants}
+           {...animationConfig}
         >
         {brainStorming.map((item, index) => (
-          <BrainStormingWrapper key={item.id} style={{
+          <BrainStormingWrapper variants={itemVariants} key={item.id} style={{
             background: togleIndex === index ? `${theme.colors.bgGreen}` : `#fff`,
             boxShadow: togleIndex === index ? `3px 3px 0 #000` : `none`,
           }}>
