@@ -124,12 +124,16 @@ export const TeamCard = styled(CommonCard)`
   opacity: 0;
   transform: translateY(50%);
   transition: opacity 0.3s ease, transform 0.5s ease;
-  pointer-events: none;
+  cursor: pointer;  
   z-index: 1;
 
   .social {
     display: inline-block;
     margin-right: 0.5rem;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
 
