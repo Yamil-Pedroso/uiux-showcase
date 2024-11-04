@@ -8,7 +8,6 @@ export const Header = styled.header`
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  min-width: 100rem;
   z-index: 100;
 
   @media (max-width: 1400px) {
@@ -29,6 +28,10 @@ export const NavContainer = styled.div`
 
   @media (max-width: 1500px) {
     padding: 0.8rem 4rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.8rem 2rem;
   }
 `;
 
