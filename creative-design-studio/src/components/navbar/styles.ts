@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const Header = styled.header`
+export const HeaderContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.bgBlack};
   color: white;
   display: flex;
@@ -12,14 +12,16 @@ export const Header = styled.header`
 
   @media (max-width: 1400px) {
     width: 100%;
+    max-width: 100%;
   }
 
   @media (max-width: 768px) {
-    width: 100%;
+    max-width: 100%;
+
   }
 
   @media (max-width: 600px) {
-    width: 100%;
+    max-width: 100%;
   }
 `;
 

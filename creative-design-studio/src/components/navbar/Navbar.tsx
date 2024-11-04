@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { AnimatePresence } from "framer-motion";
 import {
-  Header,
   NavContainer,
   Nav,
   Ul,
@@ -9,6 +8,7 @@ import {
   MyLink,
   BtnWrapper,
   MobileMenu,
+  HeaderContainer,
 } from "./styles";
 import { navLinks } from "../../types/Types";
 import Button from "../common/buttons/Button";
@@ -54,7 +54,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <Header>
+    <HeaderContainer>
       <Nav>
         <NavContainer>
           <div>
@@ -119,7 +119,7 @@ const Navbar = () => {
           </BtnWrapper>
         </NavContainer>
       </Nav>
-    </Header>
+    </HeaderContainer>
   );
 };
 
