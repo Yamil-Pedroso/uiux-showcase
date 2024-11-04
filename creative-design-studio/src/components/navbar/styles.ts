@@ -11,7 +11,15 @@ export const Header = styled.header`
   z-index: 100;
 
   @media (max-width: 1400px) {
-    padding: 0;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
   }
 `;
 
