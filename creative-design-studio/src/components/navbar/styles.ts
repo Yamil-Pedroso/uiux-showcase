@@ -6,7 +6,9 @@ export const HeaderContainer = styled.div`
   color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 100;
 
@@ -43,12 +45,6 @@ export const NavContainer = styled.div`
   @media (max-width: 768px) {
     padding: 0.8rem 2rem;
   }
-`;
-
-export const Nav = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
 `;
 
 export const Ul = styled.ul`
