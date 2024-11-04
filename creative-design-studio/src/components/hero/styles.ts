@@ -58,6 +58,7 @@ export const HeroContent = styled(motion.div)`
 export const HeroTitle = styled(motion.h1)`
   font-size: 5.2rem;
   width: 50vw;
+  max-width: 50rem;
   color: ${({ theme }) => theme.colors.colorLimeClear};
   font-family: "Krona One", sans-serif;
   font-weight: 400;
