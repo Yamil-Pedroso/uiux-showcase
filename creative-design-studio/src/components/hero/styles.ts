@@ -5,11 +5,10 @@ export const HeroSection = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  //min-height: 55rem;
+  min-height: 55rem;
   background-color: ${({ theme }) => theme.colors.bgBlack};
 
   @media (max-width: 1500px) {
-   
     padding-bottom: 4rem;
   }
 `;
@@ -26,7 +25,11 @@ export const HeroWrapper = styled.div`
     margin-top: 4rem;
   }
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1300px) {
+    gap: 10rem;
+  }
+
+  @media (max-width: 1000px) {
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -55,6 +58,10 @@ export const HeroContent = styled(motion.div)`
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+
+  @media (max-width: 1000px) {
+    
   }
 
   @media (max-width: 768px) {
@@ -141,13 +148,19 @@ export const HeroTitle = styled(motion.h1)`
   font-weight: 400;
 
   @media (max-width: 1500px) {
-    font-size: 4.2rem;
+    font-size: 3.5rem;
+    text-align: left;
+    width: 100%;
   }
 
   @media (max-width: 1400px) {
-    font-size: 3.2rem;
-    width: 100%;
+    font-size: 3rem;
+     text-align: left;
   }
+
+  @media (max-width: 1000px) {
+    text-align: center;
+    }
 
   @media (max-width: 768px) {
     font-size: 2.2rem;
@@ -182,7 +195,11 @@ export const HeroSubtitle = styled(motion.h2)`
   }
 
   @media (max-width: 1400px) {
-    width: 80%;
+    text-align: left;
+  }
+
+  @media (max-width: 1000px) {
+    text-align: center;
   }
 
   @media (max-width: 450px) {
@@ -271,6 +288,10 @@ export const HeroImageContainer = styled(motion.div)`
   @media (max-width: 1500px) {
     width: 100%;
   }
+
+  @media (max-width: 1000px) {
+   
+  }
 `;
 
 export const HeroImage = styled.div`
@@ -283,9 +304,13 @@ export const HeroImage = styled.div`
 
   @media (max-width: 1500px) {
     margin: 0 auto;
-    width: 25rem;
+    width: 22rem;
     height: auto;
     min-width: 90%;
+  }
+
+  @media (max-width: 1000px) {
+    margin-top: -8rem;
   }
 
   img {

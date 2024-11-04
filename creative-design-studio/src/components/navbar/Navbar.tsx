@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { AnimatePresence } from "framer-motion";
 import {
-  NavContainer,
   Ul,
   Li,
   MyLink,
@@ -54,7 +53,7 @@ const Navbar = () => {
 
   return (
     <HeaderContainer>
-        <NavContainer>
+       
           <div>
             <h1>Logo</h1>
           </div>
@@ -115,7 +114,7 @@ const Navbar = () => {
               <IoMenu size={30} />
             </button>
           </BtnWrapper>
-        </NavContainer>
+      
      
     </HeaderContainer>
   );

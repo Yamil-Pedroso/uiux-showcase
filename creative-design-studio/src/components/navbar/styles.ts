@@ -2,11 +2,14 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const HeaderContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.8rem 0;
+  position: fixed;
+  width: 100%;
   background-color: ${({ theme }) => theme.colors.bgBlack};
   color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   z-index: 1;
 
   @media (max-width: 1450px) {
@@ -16,8 +19,8 @@ export const HeaderContainer = styled.div`
 
 export const NavContainer = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 0.8rem 15rem;
 
 
@@ -38,7 +41,7 @@ export const Ul = styled.ul`
   margin: 0;
   padding: 0;
 
-  @media (max-width: 1450px) {
+  @media (max-width: 1000px) {
     display: none;
   }
 `;
@@ -62,7 +65,7 @@ export const BtnWrapper = styled.div`
 
   .start-btn {
     padding: 1rem 2rem;
-    @media (max-width: 600px) {
+    @media (max-width: 550px) {
       display: none;
     }
   }
@@ -71,7 +74,7 @@ export const BtnWrapper = styled.div`
     margin-left: 3rem;
     display: none;
 
-    @media (max-width: 1450px) {
+    @media (max-width: 1000px) {
       display: block;
       cursor: pointer;
     }
@@ -90,6 +93,7 @@ export const MobileMenu = styled(motion.div)`
     top: 0;
     display: block;
     color: ${({ theme }) => theme.colors.bgBlack};
+    z-index: 2;
 
     h1 {
       color: ${({ theme }) => theme.colors.bgBlack};
