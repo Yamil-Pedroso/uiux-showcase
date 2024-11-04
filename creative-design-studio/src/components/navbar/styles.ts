@@ -8,7 +8,7 @@ export const Header = styled.header`
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  min-height: 100rem;
+  min-width: 100rem;
   z-index: 100;
 
   @media (max-width: 1400px) {
