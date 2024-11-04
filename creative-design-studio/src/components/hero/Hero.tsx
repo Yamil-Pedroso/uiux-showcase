@@ -6,12 +6,13 @@ import {
   People,
   HeroImageContainer,
   HeroImage,
+  HeroWrapper,
+  HeroBtnWrapper,
 } from "./styles";
 import Button from "../common/buttons/Button";
 import { FaStarOfLife } from "react-icons/fa";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import images from "../../assets/images";
-import { motion } from "framer-motion";
 import {
   containerVariants,
   itemVariants,
@@ -62,88 +63,75 @@ const Hero = () => {
 
   return (
     <HeroSection id="home">
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          maxWidth: "100rem",
-          margin: "0 auto",
-        }}
-      >
-      <HeroContent variants={containerVariants} {...animationConfig}>
-        <HeroTitle variants={itemVariants}>
-          A creative{" "}
-          <span>
-            <FaStarOfLife size={58} className="icon" />
-          </span>
-          {" "}
-          design studio
-        </HeroTitle>
-        <HeroSubtitle variants={itemVariants}>
-          We're a creative design studio specializing in meeting the needs of
-          the new generation. We offer innovative and cutting-edge design
-          solutions to help our clients stand out in today's fast-paced.
-        </HeroSubtitle>
-        <People variants={itemVariants}>
-          <div className="content">
-            {persons.map((person, index) => (
-              <div
-                className="person-wrapper"
+      <HeroWrapper>
+        <HeroContent variants={containerVariants} {...animationConfig}>
+          <HeroTitle variants={itemVariants}>
+            A creative{" "}
+            <span>
+              <FaStarOfLife className="icon" />
+            </span>{" "}
+            design studio
+          </HeroTitle>
+          <HeroSubtitle variants={itemVariants}>
+            We're a creative design studio specializing in meeting the needs of
+            the new generation. We offer innovative and cutting-edge design
+            solutions to help our clients stand out in today's fast-paced.
+          </HeroSubtitle>
+          <People variants={itemVariants}>
+            <div className="content">
+              {persons.map((person, index) => (
+                <div
+                  className="person-wrapper"
+                  style={{
+                    marginLeft:
+                      index === 1 ? "4rem" : index === 2 ? "8rem" : "0",
+                  }}
+                >
+                  <img
+                    src={person.url}
+                    alt="Person"
+                    key={index}
+                    width="100"
+                    height="100"
+                  />
+                </div>
+              ))}
+            </div>
+            <p>Believed by more than a thousand people</p>
+          </People>
+          <HeroBtnWrapper
+            variants={itemVariants}
+          >
+            <Button className="hero-btn">
+              Book a free consultation
+              <BsFillTelephoneFill
                 style={{
-                  marginLeft: index === 1 ? "4rem" : index === 2 ? "8rem" : "0",
+                  padding: "1rem",
+                  borderRadius: "50%",
+                  backgroundColor: "black",
                 }}
-              >
-                <img
-                  src={person.url}
-                  alt="Person"
-                  key={index}
-                  width="100"
-                  height="100"
-                />
-              </div>
-            ))}
-          </div>
-          <p>Believed by more than a thousand people</p>
-        </People>
-        <motion.div
-          variants={itemVariants}
-          style={{
-            display: "flex",
-            position: "relative",
-          }}
-        >
-          <Button className="hero-btn">
-            Book a free consultation
-            <BsFillTelephoneFill
-              style={{
-                padding: "1rem",
-                borderRadius: "50%",
-                backgroundColor: "black",
-              }}
-              size={20}
-              color="white"
-              className="icon"
-            />
+              
+                color="white"
+                className="icon"
+              />
+              <img
+                src={images.curveArrow}
+                alt="curved arrow"
+                className="hero-arrow"
+              />
+            </Button>
+          </HeroBtnWrapper>
+        </HeroContent>
+
+        <HeroImageContainer {...heroImageContainerVariants}>
+          <HeroImage>
             <img
-              src={images.curveArrow}
-              alt="curved arrow"
-              className="hero-arrow"
+              src="https://as2.ftcdn.net/v2/jpg/09/25/50/83/1000_F_925508383_JNq0anb1JAm7EUYJ3ULbd2PPzZhrNVnF.jpg"
+              alt="Imagen Representativa de la Agencia"
             />
-          </Button>
-        </motion.div>
-      </HeroContent>
-
-      <HeroImageContainer {...heroImageContainerVariants}>
-        <HeroImage>
-          <img
-            src="https://as2.ftcdn.net/v2/jpg/09/25/50/83/1000_F_925508383_JNq0anb1JAm7EUYJ3ULbd2PPzZhrNVnF.jpg"
-            alt="Imagen Representativa de la Agencia"
-          />
-        </HeroImage>
-      </HeroImageContainer>
-
-      </div>
+          </HeroImage>
+        </HeroImageContainer>
+      </HeroWrapper>
     </HeroSection>
   );
 };
