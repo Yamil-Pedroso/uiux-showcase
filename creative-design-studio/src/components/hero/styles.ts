@@ -4,31 +4,39 @@ import { motion } from "framer-motion";
 export const HeroSection = styled(motion.section)`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 4rem 12vw 0 12vw;
-  height: 49rem;
+  justify-content: center;
+  width: 100%;
+  min-height: 55rem;
   background-color: ${({ theme }) => theme.colors.bgBlack};
 
   @media (max-width: 1500px) {
     height: auto;
     padding-bottom: 4rem;
   }
-
-  @media (max-width: 1400px) {
-  }
 `;
 
 export const HeroWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  width: 100%;
   max-width: 100rem;
   margin: 0 auto;
+  gap: 4rem;
+
+  @media (max-width: 1500px) {
+    padding: 0 10rem;
+    margin-top: 4rem;
+  }
 
   @media (max-width: 1400px) {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 3rem;
   }
 `;
 
@@ -36,12 +44,16 @@ export const HeroContent = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
-  margin-top: -6rem;
+  width: 100%;
+  max-width: 50rem;
+  margin-top: -4rem;
   position: relative;
 
+  @media (max-width: 1500px) {
+   
+  }
+
   @media (max-width: 1400px) {
-    width: 100%;
     margin-top: 3rem;
     align-items: center;
     justify-content: center;
@@ -273,9 +285,10 @@ export const HeroImage = styled.div`
   transition: all 0.3s ease-in-out;
 
   @media (max-width: 1500px) {
+    margin: 0 auto;
     width: 25rem;
     height: auto;
-    width: 100%;
+    min-width: 90%;
   }
 
   img {

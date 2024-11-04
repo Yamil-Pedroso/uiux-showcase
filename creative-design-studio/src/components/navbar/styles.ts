@@ -9,17 +9,25 @@ export const Header = styled.header`
   position: fixed;
   width: 100%;
   z-index: 100;
+
+  @media (max-width: 1400px) {
+    padding: 0;
+  }
 `;
 
 export const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 15vw;
+  padding: 0.8rem 15rem;
   width: 100%;
 
   h1 {
     color: ${({ theme }) => theme.colors.colorLimeClear};
+  }
+
+  @media (max-width: 1500px) {
+    padding: 0.8rem 4rem;
   }
 `;
 
@@ -36,7 +44,7 @@ export const Ul = styled.ul`
   margin: 0;
   padding: 0;
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1450px) {
     display: none;
   }
 `;
@@ -69,7 +77,7 @@ export const BtnWrapper = styled.div`
     margin-left: 3rem;
     display: none;
 
-    @media (max-width: 1400px) {
+    @media (max-width: 1450px) {
       display: block;
       cursor: pointer;
     }
