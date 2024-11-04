@@ -59,7 +59,7 @@ export const Description = styled.p`
   font-weight: 300;
   font-family: "Inter", sans-serif;
   margin: 1rem 0;
-  width: 28vw;
+  width: 28rem;
 `;
 
 export const Tel = styled.p`

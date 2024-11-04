@@ -24,6 +24,11 @@ export const NavContainer = styled.div`
   h1 {
     color: ${({ theme }) => theme.colors.colorLimeClear};
   }
+
+  @media (max-width: 768px) {
+    padding: 0.8rem 5rem;
+    width: 100%;
+  }
 `;
 
 export const Ul = styled.ul`

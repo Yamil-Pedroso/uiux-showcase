@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.mainBackground};
     font-family: "Krona One", sans-serif;
     font-weight: 400;
+    
   }
 
   h1, h2, h3, h4, h5, h6 {

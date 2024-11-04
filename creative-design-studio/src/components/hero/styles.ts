@@ -5,7 +5,7 @@ export const HeroSection = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 55rem;
+  //min-height: 55rem;
   background-color: ${({ theme }) => theme.colors.bgBlack};
 
   @media (max-width: 1500px) {
@@ -134,7 +134,7 @@ export const HeroBtnWrapper = styled(motion.div)`
 
 export const HeroTitle = styled(motion.h1)`
   font-size: 5.2rem;
-  width: 50vw;
+  width: 50rem;
   max-width: 50rem;
   color: ${({ theme }) => theme.colors.colorLimeClear};
   font-family: "Krona One", sans-serif;
