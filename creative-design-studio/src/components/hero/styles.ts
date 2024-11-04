@@ -1,16 +1,15 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const HeroSection = styled(motion.section)`
+export const HeroSection = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   min-height: 55rem;
   background-color: ${({ theme }) => theme.colors.bgBlack};
 
   @media (max-width: 1500px) {
-    height: auto;
+   
     padding-bottom: 4rem;
   }
 `;
@@ -19,8 +18,6 @@ export const HeroWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 100rem;
   margin: 0 auto;
   gap: 4rem;
 

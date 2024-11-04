@@ -33,34 +33,6 @@ const persons = [
 ];
 
 const Hero = () => {
-  //const controls = useAnimation();
-  //const heroRef = useRef(null);
-  //
-  //useEffect(() => {
-  //  const observer = new IntersectionObserver(
-  //    (entries) => {
-  //      entries.forEach((entry) => {
-  //        if (entry.isIntersecting) {
-  //          controls.start({ opacity: 1, y: 0 });
-  //        } else {
-  //          controls.start({ opacity: 0, y: 100 });
-  //        }
-  //      });
-  //    },
-  //    { threshold: 0.5 } // Ajusta el umbral según prefieras
-  //  );
-  //
-  //  if (heroRef.current) {
-  //    observer.observe(heroRef.current);
-  //  }
-  //
-  //  return () => {
-  //    if (heroRef.current) {
-  //      observer.unobserve(heroRef.current);
-  //    }
-  //  };
-  //}, [controls]);
-
   return (
     <HeroSection id="home">
       <HeroWrapper>

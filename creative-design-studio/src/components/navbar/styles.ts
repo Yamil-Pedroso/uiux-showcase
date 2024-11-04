@@ -7,23 +7,10 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
+  z-index: 1;
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1450px) {
     width: 100%;
-    max-width: 100%;
-  }
-
-  @media (max-width: 768px) {
-    max-width: 100%;
-
-  }
-
-  @media (max-width: 600px) {
-    max-width: 100%;
   }
 `;
 
@@ -32,18 +19,10 @@ export const NavContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 15rem;
-  width: 100%;
+
 
   h1 {
     color: ${({ theme }) => theme.colors.colorLimeClear};
-  }
-
-  @media (max-width: 1500px) {
-    padding: 0.8rem 4rem;
-  }
-
-  @media (max-width: 768px) {
-    padding: 0.8rem 2rem;
   }
 `;
 
