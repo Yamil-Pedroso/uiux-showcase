@@ -12,16 +12,44 @@ export const ServicesHeader = styled.div`
   display: flex;
   color: ${({ theme }) => theme.colors.primaryText};
   margin-bottom: 2rem;
-  margin: 0 auto;
+  margin: 3rem auto;
   h2 {
     text-align: center;
     font-size: 4rem;
+
+    @media (max-width: 1200px) {
+      width: 50rem;
+      margin: 0 auto;
+      font-size: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+      margin-top: -2rem;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 1.5rem;
+    }
   }
   span {
     margin-left: 1rem;
 
     .icon {
       color: ${({ theme }) => theme.colors.bgGreen};
+      font-size: 4rem;
+
+      @media (max-width: 1200px) {
+        font-size: 3rem;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+
+      @media (max-width: 500px) {
+        font-size: 1.5rem;
+      }
     }
   }
 `;
@@ -54,23 +82,31 @@ export const Card = styled(motion.div)`
 
 export const CardIcon = styled.div`
   font-size: 3rem;
-  margin-bottom: 1rem;
+`;
+
+export const Text = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: -.5rem;
+
+  * {
+    margin-bottom: 0rem;
+  }
 `;
 
 export const CardTitle = styled.h3`
   font-size: 1.875rem;
-  margin-bottom: 0.5rem;
   font-weight: 500;
   color: #2e2e2e;
 `;
 
 export const CardDescription = styled.p`
   font-size: 1.125rem;
-  margin-bottom: 1rem;
   font-family: "Inter", sans-serif;
   color: #313131;
 `;
 
 export const CardFooterIcon = styled.div`
   font-size: 1.5rem;
+  margin-top: 1rem;
 `;

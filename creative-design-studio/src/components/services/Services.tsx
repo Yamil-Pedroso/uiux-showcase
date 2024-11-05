@@ -8,10 +8,15 @@ import {
   CardTitle,
   CardDescription,
   CardFooterIcon,
+  Text,
 } from "./styles";
 import { services, IServices } from "../../types/Types";
 import { FaStarOfLife } from "react-icons/fa";
-import { containerVariants, animationConfig, itemVariants } from "../../animations/variants";
+import {
+  containerVariants,
+  animationConfig,
+  itemVariants,
+} from "../../animations/variants";
 
 const Services: React.FC<IServices> = () => {
   return (
@@ -20,34 +25,24 @@ const Services: React.FC<IServices> = () => {
         <h2>
           We provide effective design solutions
           <span>
-            <FaStarOfLife size={58} className="icon" />
+            <FaStarOfLife className="icon" />
           </span>
         </h2>
       </ServicesHeader>
-      <CardsContainer
-         variants={containerVariants}
-         {...animationConfig}
-      >
+      <CardsContainer variants={containerVariants} {...animationConfig}>
         {services.map((service, index) => (
-            <Card
-              variants={itemVariants}
-              key={index}>
-              <CardIcon>
-                {typeof service.iconOne === "function"
-                  ? React.createElement(service.iconOne)
-                  : service.iconOne}
-              </CardIcon>
+          <Card variants={itemVariants} key={index}>
+            <CardIcon>
+              <img src={service.iconOne} alt="icon" width={60} />
+            </CardIcon>
+            <Text>
               <CardTitle>{service.title}</CardTitle>
-              <CardDescription>
-                {service.description}
-              </CardDescription>
-              <CardFooterIcon>{
-                typeof service.iconTwo === "function"
-                  ? React.createElement(service.iconTwo)
-                  : service.iconTwo
-                }</CardFooterIcon>
-            </Card>
-
+              <CardDescription>{service.description}</CardDescription>
+            </Text>
+            <CardFooterIcon>
+              <img src={service.iconTwo} alt="icon" width={60} />
+            </CardFooterIcon>
+          </Card>
         ))}
       </CardsContainer>
     </ServicesSection>
