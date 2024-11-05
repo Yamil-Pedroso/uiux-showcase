@@ -40,7 +40,7 @@ const Services: React.FC<IServices> = () => {
               <CardDescription>{service.description}</CardDescription>
             </Text>
             <CardFooterIcon>
-              <img src={service.iconTwo} alt="icon" width={60} />
+              <img src={service.iconTwo} alt="icon"/>
             </CardFooterIcon>
           </Card>
         ))}
