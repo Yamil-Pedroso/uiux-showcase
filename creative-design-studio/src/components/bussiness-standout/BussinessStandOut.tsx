@@ -1,12 +1,13 @@
-
 import { useEffect, useRef, useState } from "react";
 import {
   Container,
   TextSection,
   Title,
   Subtitle,
+  SubtitleMobile,
   VideoContainer,
   VideoImage,
+  PlayVideo,
   PlayButton,
   StatsPanel,
   StatItem,
@@ -14,24 +15,25 @@ import {
   StatDescription,
   LeftSide,
   RightSide,
-  Overlay
+  Overlay,
 } from "./styles";
 import { verticalConfig } from "../../animations/variants";
-import { FaStarOfLife } from "react-icons/fa";
+import { FaStarOfLife, FaRegWindowClose } from "react-icons/fa";
 import Video from "../common/media/Video";
 import { agencyVideo } from "../../assets/media";
+import images from "../../assets/images";
 
 const BusinessStandOut = () => {
   const [startCount, setStartCount] = useState(false);
-  const statRef = useRef<HTMLDivElement>(null) ;
+  const statRef = useRef<HTMLDivElement>(null);
   const [experience, setExperience] = useState(0);
   const [projects, setProjects] = useState(0);
   const [satisfaction, setSatisfaction] = useState(0);
-  const [clickPlay, setClickPlay] = useState(false)
+  const [clickPlay, setClickPlay] = useState(false);
 
   const handleClick = () => {
-     setClickPlay(prev => !prev)
-  }
+    setClickPlay((prev) => !prev);
+  };
 
   useEffect(() => {
     const currentStatRef = statRef.current;
@@ -93,31 +95,39 @@ const BusinessStandOut = () => {
       <LeftSide>
         <TextSection>
           <Title>
-            We make your <span>
+            We make your{" "}
+            <span>
               <FaStarOfLife size={58} className="icon" />
-              </span> business stand out
+            </span>{" "}
+            business stand out
           </Title>
+
+          <SubtitleMobile>
+            We work closely with our clients to know their objectives, target
+            audience, unique needs, and practical design solutions.
+          </SubtitleMobile>
         </TextSection>
         <Overlay isActive={clickPlay} />
-        <VideoContainer
-          {...verticalConfig}
-        >
-          <VideoImage
-
-            src="https://img.freepik.com/free-photo/people-working-together-animation-studio_23-2149208004.jpg?t=st=1730630471~exp=1730634071~hmac=6486324be78feba762b8a8006b7f4eac34a38a83a1565f7d839773245d2d83f8&w=2000"
-            alt=""
-          />
-          <PlayButton
-            onClick={handleClick}
-          >Play</PlayButton>
+        <VideoContainer {...verticalConfig}>
+          <VideoImage src={images.agencyOne} alt="Design Agency" />
+          <PlayButton onClick={handleClick}>Play</PlayButton>
         </VideoContainer>
-        <Video
-          {...verticalConfig}
+        <PlayVideo
+          {...verticalConfig} 
           style={{
-             display: clickPlay ? "block" : "none"
+            display: clickPlay ? "block" : "none",
           }}
-         className="video"
-        src={agencyVideo} />
+          
+        >
+          <FaRegWindowClose
+            className="close"
+            onClick={handleClick}
+            size={30}
+          />
+          <Video className="video"
+           width="100%" height="auto"
+           src={agencyVideo} />
+        </PlayVideo>
       </LeftSide>
 
       <RightSide>

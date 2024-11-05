@@ -9,6 +9,8 @@ interface VideoProps {
   muted?: boolean;
   controls?: boolean;
   className?: string;
+  width?: string;
+  height?: string;
   style?:  React.CSSProperties;
 }
 
@@ -18,6 +20,8 @@ const Video = forwardRef<HTMLVideoElement, VideoProps>(({
   loop = false,
   muted = false,
   controls = true,
+  width,
+  height,
   className,
   style
 }, ref) => {
@@ -30,6 +34,8 @@ const Video = forwardRef<HTMLVideoElement, VideoProps>(({
       muted={muted}
       controls={controls}
       className={className}
+      width={width}
+      height={height}
       style={style}
     />
   );
