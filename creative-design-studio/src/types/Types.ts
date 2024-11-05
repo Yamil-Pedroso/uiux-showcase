@@ -34,28 +34,28 @@ const services: IServices[] = [
     title: "UI/UX Design",
     description: "Focusing on user interface (UI) and user experience (UX) design enhance the usability and accessibility of digital products & app.",
     iconOne: images.rule,
-    iconTwo: images.rule,
+    iconTwo: images.rightArrow,
   },
   {
     id: 2,
     title: "Graphic Design",
     description: "Creating visual elements such as logos, branding materials, page layout techniques, brochures, & other marketing collateral.",
     iconOne: images.rule,
-    iconTwo: images.rule,
+    iconTwo: images.rightArrow,
   },
   {
     id: 3,
     title: "Web Design",
     description: "Designing and developing websites to ensure they are visually look and appealing, user-friendly, and functional your website.",
     iconOne: images.rule,
-    iconTwo: images.rule,
+    iconTwo: images.rightArrow,
   },
   {
     id: 4,
     title: "Motion Graphics",
     description: "Creating animate graphics, videos for various purposes, including marketing and entertainment. To help sell a product or service.",
     iconOne: images.rule,
-    iconTwo: images.rule,
+    iconTwo: images.rightArrow,
   },
 ];
 

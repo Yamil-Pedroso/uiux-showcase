@@ -78,6 +78,11 @@ export const Card = styled(motion.div)`
     background-color: ${({ theme }) => theme.colors.bgGreen};
     box-shadow: .3rem .3rem 1px  #000000;
   }
+
+  @media (max-width: 768px) {
+    width: 25rem;
+    height: auto;
+  }
 `;
 
 export const CardIcon = styled.div`
@@ -98,15 +103,31 @@ export const CardTitle = styled.h3`
   font-size: 1.875rem;
   font-weight: 500;
   color: #2e2e2e;
+
+  @media (max-width: 600px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const CardDescription = styled.p`
   font-size: 1.125rem;
   font-family: "Inter", sans-serif;
   color: #313131;
+
+  @media (max-width: 600px) {
+    font-size: 1rem;
+  }
 `;
 
 export const CardFooterIcon = styled.div`
   font-size: 1.5rem;
   margin-top: 1rem;
+
+  img {
+    width: 3rem;
+
+    @media (max-width: 600px) {
+      width: 2rem;
+    }
+  }
 `;
