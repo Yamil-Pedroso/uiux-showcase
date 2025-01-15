@@ -33,7 +33,13 @@ const Services: React.FC<IServices> = () => {
         {services.map((service, index) => (
           <Card variants={itemVariants} key={index}>
             <CardIcon>
-              <img src={service.iconOne} alt="icon" width={60} />
+              {
+                typeof service.iconOne === "string" ? (
+                  <img src={service.iconOne} alt="icon" />
+                ) : (
+                  typeof service.iconOne === "function" ? React.createElement(service.iconOne) : null
+                )
+              }
             </CardIcon>
             <Text>
               <CardTitle>{service.title}</CardTitle>

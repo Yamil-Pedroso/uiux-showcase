@@ -11,7 +11,7 @@ import {
 } from "./styles";
 import { FaTwitter, FaFacebookF, FaStarOfLife } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
-import { FaLinkedinIn } from "react-icons/fa6";
+import { FaLinkedinIn, FaCircleArrowRight } from "react-icons/fa6";
 import images from "../../assets/images";
 import Button from "../common/buttons/Button";
 
@@ -58,8 +58,11 @@ const Contact = () => {
             <input type="text" placeholder="Name" />
             <input type="email" placeholder="Email" />
             <input type="tel" placeholder="Phone" />
-            <textarea placeholder="Message"></textarea>
-            <Button>Send</Button>
+            <textarea placeholder="Message..."></textarea>
+            <Button className="btn">
+              <span>Send message</span>
+              <FaCircleArrowRight className="cir-arrow-icon" />
+            </Button>
           </form>
         </RightSide>
       </Content>

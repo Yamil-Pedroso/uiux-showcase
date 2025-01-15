@@ -1,9 +1,9 @@
-import { FeedbacksSection, Title } from './styles'
 import Cards from '../common/card/Card'
 import { feedbacks, IServices } from '../../types/Types'
 import { FaStarOfLife } from "react-icons/fa";
 import { animationConfig, containerVariants, itemVariants } from '../../animations/variants';
 import { motion } from 'framer-motion';
+import { FeedbacksSection, Title } from './styles'
 
 const FeedBack: React.FC<IServices> = () => {
 
@@ -18,7 +18,7 @@ const FeedBack: React.FC<IServices> = () => {
         <FaStarOfLife style={{
           position: "absolute",
           bottom: "4rem",
-          right : "2.5rem",
+          right : "0",
         }} />
         </span></h2>
     </Title >
