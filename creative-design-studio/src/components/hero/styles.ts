@@ -302,6 +302,16 @@ export const HeroImage = styled.div`
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 
+  img {
+    transform: scale(1.2);
+    object-fit: cover;
+    transition: transform 0.5s;
+
+    &:hover {
+    transform: scale(1);
+  }
+  }
+
   @media (max-width: 1500px) {
     margin: 0 auto;
     width: 22rem;

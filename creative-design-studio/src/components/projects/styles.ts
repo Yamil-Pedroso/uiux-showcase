@@ -18,27 +18,46 @@ export const Title = styled.h2`
   span {
     color: ${({ theme }) => theme.colors.bgGreen};
   }
+
+  @media (max-width: 960px) {
+    width: 30rem;
+    font-size: 2rem;
+    text-align: center;
+
+    span {
+      display: none;
+    }
+  }
 `;
 
 export const SliderContainer = styled.div`
-  position: relative;
   height: auto;
-  margin: 0 auto;
+  width: 100%;
   border-radius: 8px;
   overflow: hidden;
-`;
+  position: relative;
+  `;
 
 export const CardsContainer = styled.div<{ activeIndex: number }>`
   display: flex;
+  gap: 1rem;
   transition: transform 0.5s ease;
   transform: ${({ activeIndex }) => `translateX(-${(activeIndex * 100) / 4}%)`};
   width: calc(100% * ${2 / 3});
+
+  @media (max-width: 960px) {
+    width: calc(100% * ${2 /1});
+    transform: ${({ activeIndex }) => `translateX(-${(activeIndex * 100) / 2}%)`};
+  }
+
+  @media (max-width: 768px) {
+    width: calc(100% * ${2 / 1});
+  }
 `;
 
 export const Card = styled.div`
   flex: 0 0 45%; /* Ancho menor para mostrar dos tarjetas completas */
-  margin: 0 1rem;
-
+  margin: 0;
   height: 475px;
   border: 5px solid ${({ theme }) => theme.colors.colorLimeClear};
   //filter: brightness(0.5);
@@ -50,6 +69,10 @@ export const Card = styled.div`
   display: flex;
   align-items: flex-end;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: 400px;
+  }
 `;
 
 export const Image = styled.img`
@@ -114,6 +137,14 @@ export const NavigationBar = styled.div`
   height: 0.2rem;
   background-color: #383838;
   border-radius: 5px;
+
+  @media (max-width: 960px) {
+    width: 40rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 30rem;
+  }
 `;
 
 export const NavigationIndicator = styled.div<{ isActive: boolean }>`
@@ -122,6 +153,10 @@ export const NavigationIndicator = styled.div<{ isActive: boolean }>`
     isActive ? theme.colors.bgGreen : "transparent"};
   transition: background-color 0.3s;
   cursor: pointer;
+
+  @media (max-width: 960px) {
+    flex: 1;
+  }
 `;
 
 export const NavButton = styled.button`

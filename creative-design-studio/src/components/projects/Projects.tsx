@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ProjectsSection,
   Image,
@@ -16,6 +16,7 @@ import { projects, IServices } from "../../types/Types";
 
 const Projects: React.FC<IServices> = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [visibleIndicators, setVisibleIndicators] = useState(3);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   //const [offset, setOffset] = useState(0);
@@ -31,6 +32,26 @@ const Projects: React.FC<IServices> = () => {
       prevIndex < projects.length - 1 ? prevIndex + 1 : 0
     );
   };
+
+  useEffect(() => {
+    // Function to set the number of indicators based on screen size
+    const updateIndicators = () => {
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        setVisibleIndicators(4); // Show 5 indicators on smaller screens
+      } else {
+        setVisibleIndicators(3); // Default to 3 indicators on larger screens
+      }
+    };
+
+    // Initial check
+    updateIndicators();
+
+    // Add resize event listener
+    window.addEventListener("resize", updateIndicators);
+
+    // Cleanup listener on unmount
+    return () => window.removeEventListener("resize", updateIndicators);
+  }, []);
 
   const handleNavigationClick = (index: number) => {
     setActiveIndex(index);
@@ -109,7 +130,7 @@ const Projects: React.FC<IServices> = () => {
         </NavButton>*/}
 
         <NavigationBar>
-          {Array.from({ length: projects.length - 1 }).map((_, index) => (
+          {Array.from({ length: visibleIndicators }).map((_, index) => (
             <NavigationIndicator
               key={index}
               isActive={activeIndex === index}
