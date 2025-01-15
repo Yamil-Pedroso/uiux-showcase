@@ -81,7 +81,7 @@ const projects: IProjects[] = [
       "Developing the look and feel of physical products, aesthetics, and funtionality.",
     iconOne: "➔",
     imageUrl:
-      "https://images.unsplash.com/photo-1455894127589-22f75500213a?q=80&w=1987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://img.freepik.com/free-vector/graphic-design-geometric-lettering_23-2148470664.jpg?ga=GA1.1.689451841.1699970434&semt=ais_tags_boosted",
   },
   {
     id: 2,
@@ -90,7 +90,7 @@ const projects: IProjects[] = [
       "Creating or refreshing a company's logo and developing a cohesive visual identity.",
     iconOne: "➔",
     imageUrl:
-      "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://img.freepik.com/free-vector/editable-poster-template-vector-bauhaus-inspired-flat-design-creative-studio-text_53876-136716.jpg?ga=GA1.1.689451841.1699970434&semt=ais_tags_boosted",
   },
   {
     id: 3,
@@ -99,7 +99,7 @@ const projects: IProjects[] = [
       "Designing the UI/UX for mobile apps and web applications to ensure usability & engagement.",
     iconOne: "➔",
     imageUrl:
-      "https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://img.freepik.com/free-photo/creative-light-bulb-abstract-glowing-blue-background-generative-ai_188544-8090.jpg?ga=GA1.1.689451841.1699970434&semt=ais_tags_boosted",
   },
   {
     id: 4,
@@ -108,7 +108,7 @@ const projects: IProjects[] = [
       "Creating packaging solutions for products that not only protect attract customers on store.",
     iconOne: "➔",
     imageUrl:
-      "https://images.unsplash.com/photo-1504707748692-419802cf939d?q=80&w=2047&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://img.freepik.com/free-vector/modern-color-paint-template-vector-colorful-event-ad-banner-set_53876-140619.jpg?ga=GA1.1.689451841.1699970434&semt=ais_tags_boosted",
   },
 ];
 

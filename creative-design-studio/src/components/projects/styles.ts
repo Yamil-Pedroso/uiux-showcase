@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ProjectsSection = styled.section`
   margin-top: 10rem;
@@ -29,16 +29,16 @@ export const SliderContainer = styled.div`
 `;
 
 export const CardsContainer = styled.div<{ activeIndex: number }>`
-   display: flex;
+  display: flex;
   transition: transform 0.5s ease;
-  transform: ${({ activeIndex }) => `translateX(-${activeIndex * 100 / 4}%)`};
+  transform: ${({ activeIndex }) => `translateX(-${(activeIndex * 100) / 4}%)`};
   width: calc(100% * ${2 / 3});
-  `;
+`;
 
 export const Card = styled.div`
   flex: 0 0 45%; /* Ancho menor para mostrar dos tarjetas completas */
   margin: 0 1rem;
- 
+
   height: 475px;
   border: 5px solid ${({ theme }) => theme.colors.colorLimeClear};
   //filter: brightness(0.5);
@@ -53,27 +53,32 @@ export const Card = styled.div`
 `;
 
 export const Image = styled.img`
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: relative;
-    transition: transform 0.5s;
-    filter: brightness(0.6);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  transition: transform 0.5s;
+  //filter: brightness(0.8);
 
-    &:hover {
-      transform: scale(1.1);
-      cursor: pointer;
-    }
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
 `;
 
 export const CardContent = styled.div`
   display: flex;
   color: ${({ theme }) => theme.colors.colorLimeClear};
   padding: 1rem;
-  width: 100%;
   border-radius: 0 0 8px 8px;
   position: absolute;
-    bottom: 0;
+  bottom: 0;
+
+  .text-wrapper {
+    display: flex;
+    padding: 1rem;
+    background-color: ${({ theme }) => theme.colors.bgBlack};
+  }
   h3 {
     margin: 0;
     font-size: 1.875rem;
@@ -86,7 +91,12 @@ export const CardContent = styled.div`
   }
 
   span {
-    font-size: 2rem;
+    font-size: 4rem;
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.bgGreen};
+      cursor: pointer;
+    }
   }
 `;
 
@@ -100,16 +110,16 @@ export const NavigationWrapper = styled.div`
 
 export const NavigationBar = styled.div`
   display: flex;
-  width: 20rem;
-  height: 1rem;
-  background-color: ${({ theme }) => theme.colors.gray};
+  width: 50rem;
+  height: 0.2rem;
+  background-color: #383838;
   border-radius: 5px;
-  overflow: hidden;
 `;
 
 export const NavigationIndicator = styled.div<{ isActive: boolean }>`
   flex: 1;
-  background-color: ${({ isActive, theme }) => (isActive ? theme.colors.highlight : 'transparent')};
+  background-color: ${({ isActive, theme }) =>
+    isActive ? theme.colors.bgGreen : "transparent"};
   transition: background-color 0.3s;
   cursor: pointer;
 `;

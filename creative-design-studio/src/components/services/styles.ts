@@ -125,6 +125,7 @@ export const CardFooterIcon = styled.div`
 
   img {
     width: 3rem;
+    cursor: pointer;
 
     @media (max-width: 600px) {
       width: 2rem;

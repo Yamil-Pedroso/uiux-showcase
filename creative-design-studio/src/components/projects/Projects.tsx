@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from "react";
 import {
   ProjectsSection,
@@ -11,7 +10,7 @@ import {
   NavigationWrapper,
   NavigationBar,
   NavigationIndicator,
-  NavButton,
+  //NavButton,
 } from "./styles";
 import { projects, IServices } from "../../types/Types";
 
@@ -87,12 +86,12 @@ const Projects: React.FC<IServices> = () => {
             <Card key={project.id}>
               <Image src={project.imageUrl} alt={project.title} />
               <CardContent>
-                <div>
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                </div>
-                <div>
-                <span>
+                <div className="text-wrapper">
+                  <div>
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
+                  </div>
+                  <span>
                     {typeof project.iconOne === "function"
                       ? React.createElement(project.iconOne)
                       : project.iconOne}
@@ -105,9 +104,9 @@ const Projects: React.FC<IServices> = () => {
       </SliderContainer>
 
       <NavigationWrapper>
-        <NavButton onClick={handlePrev} disabled={activeIndex === 0}>
+        {/*<NavButton onClick={handlePrev} disabled={activeIndex === 0}>
           Prev
-        </NavButton>
+        </NavButton>*/}
 
         <NavigationBar>
           {Array.from({ length: projects.length - 1 }).map((_, index) => (
@@ -119,12 +118,12 @@ const Projects: React.FC<IServices> = () => {
           ))}
         </NavigationBar>
 
-        <NavButton
+        {/*<NavButton
           onClick={handleNext}
           disabled={activeIndex === projects.length - 2}
         >
           Next
-        </NavButton>
+        </NavButton>*/}
       </NavigationWrapper>
     </ProjectsSection>
   );
