@@ -62,6 +62,19 @@ export const TeamContainer = styled.div`
     .icon {
       color: ${({ theme }) => theme.colors.bgGreen};
     }
+
+    @media (max-width: 960px) {
+      width: 100%;
+      font-size: 3rem;
+
+      .icon {
+        display: none
+      }
+    }
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
   }
 `;
 
@@ -83,6 +96,11 @@ export const TeamCard = styled(CommonCard)`
     gap: 0.5rem;
     overflow: hidden;
     background-color: #fff;
+
+    @media (max-width: 768px) {
+      width: 22rem;
+      height: 22rem;
+    }
   }
   .avatar {
     width: 100%;

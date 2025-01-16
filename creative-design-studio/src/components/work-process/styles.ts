@@ -22,6 +22,10 @@ export const WorkingProcessContainer = styled.div`
   @media (max-width: 960px) {
     width: 40rem;
   }
+
+  @media (max-width: 768px) {
+    margin-top: 3rem;
+  }
 `;
 
 export const Toggle = styled.div`
@@ -45,6 +49,10 @@ export const Title = styled.div`
     text-align: center;
     margin: 0 auto;
   }
+
+  @media (max-width: 768px) {
+    
+  }
   > p {
     margin: 1.5rem;
 
@@ -54,6 +62,10 @@ export const Title = styled.div`
       .star-icon {
         display: none;
       }
+    }
+
+    @media (max-width: 768px) {
+      
     }
   }
   &:nth-child(1) {

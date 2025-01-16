@@ -108,7 +108,7 @@ const Projects: React.FC<IServices> = () => {
               <Image src={project.imageUrl} alt={project.title} />
               <CardContent>
                 <div className="text-wrapper">
-                  <div>
+                  <div className="text">
                     <h3>{project.title}</h3>
                     <p>{project.description}</p>
                   </div>

@@ -6,6 +6,10 @@ export const ProjectsSection = styled.section`
   padding: 5rem 0;
   height: 55rem;
   background-color: ${({ theme }) => theme.colors.bgBlack};
+
+  @media (max-width: 960px) {
+    height: auto;
+  }
 `;
 
 export const Title = styled.h2`
@@ -36,7 +40,7 @@ export const SliderContainer = styled.div`
   border-radius: 8px;
   overflow: hidden;
   position: relative;
-  `;
+`;
 
 export const CardsContainer = styled.div<{ activeIndex: number }>`
   display: flex;
@@ -46,8 +50,9 @@ export const CardsContainer = styled.div<{ activeIndex: number }>`
   width: calc(100% * ${2 / 3});
 
   @media (max-width: 960px) {
-    width: calc(100% * ${2 /1});
-    transform: ${({ activeIndex }) => `translateX(-${(activeIndex * 100) / 2}%)`};
+    width: calc(100% * ${2 / 1});
+    transform: ${({ activeIndex }) =>
+      `translateX(-${(activeIndex * 100) / 2}%)`};
   }
 
   @media (max-width: 768px) {
@@ -101,6 +106,25 @@ export const CardContent = styled.div`
     display: flex;
     padding: 1rem;
     background-color: ${({ theme }) => theme.colors.bgBlack};
+
+    @media (max-width: 768px) {
+      padding: 1rem;
+      flex-direction: column;
+
+      span {
+        font-size: 3rem;
+      }
+
+      .text {
+        h3 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
   }
   h3 {
     margin: 0;
