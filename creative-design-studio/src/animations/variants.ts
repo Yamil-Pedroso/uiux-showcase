@@ -4,20 +4,20 @@ export const containerVariants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.3,
-      delayChildren: 0.3,
+      delayChildren: 0.2,
     },
   },
 };
 
 export const itemVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
 
 export const animationConfig = {
   initial: "hidden",
   whileInView: "visible",
-  viewport: { once: false, amount: 0.5 },
+  viewport: { once: false, amount: 0.2 },
 };
 
 export const heroImageContainerVariants = {
