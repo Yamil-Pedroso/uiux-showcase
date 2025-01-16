@@ -66,6 +66,7 @@ export const CardAvatarWrapper = styled.div`
 export const TextContent = styled.div`
   display: flex;
   align-items: center;
+  white-space: nowrap;
   h3 {
     font-size: 1.25rem;
     margin-left: 1rem;
@@ -77,13 +78,19 @@ export const TextContent = styled.div`
     color: #404040;
   }
 
+
   @media (max-width: 576px) {
+      flex-direction: column;
+      > * {
+          margin: 0rem;
+        }
       h3 {
          font-size: 1rem;
       }
    
       h4 {
          font-size: 0.875rem;
+          
       }
   }
 `;
@@ -93,6 +100,12 @@ export const CardAvatar = styled.div`
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
+  flex-shrink: 0; 
+  
+  @media (max-width: 576px) {
+    width: 50px; 
+    height: 50px;
+  }
 
   img {
     width: 100%;
