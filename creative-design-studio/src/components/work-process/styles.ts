@@ -20,7 +20,7 @@ export const WorkProcessSection = styled.section`
 
 export const WorkingProcessContainer = styled.div`
   @media (max-width: 960px) {
-    width: 40rem;
+    
   }
 
   @media (max-width: 768px) {
@@ -44,21 +44,21 @@ export const Title = styled.div`
   width: 60rem;
   position: relative;
 
-  @media (max-width: 960px) {
-    width: 30rem;
+  @media (max-width: 1200px) {
+    width: 100%;
     text-align: center;
-    margin: 0 auto;
   }
 
   @media (max-width: 768px) {
-    
+   
   }
+
   > p {
     margin: 1.5rem;
 
     @media (max-width: 960px) {
-        margin: 1rem;
-        width: 100%;
+      
+       
       .star-icon {
         display: none;
       }
@@ -73,6 +73,7 @@ export const Title = styled.div`
 
     @media (max-width: 960px) {
       font-size: 2rem;
+     
     }
 
     @media (max-width: 768px) {
@@ -85,7 +86,7 @@ export const Title = styled.div`
     width: 48rem;
 
     @media (max-width: 960px) {
-      width: 35rem;
+     
     }
   }
 
@@ -95,7 +96,7 @@ export const Title = styled.div`
     width: 48rem;
 
     @media (max-width: 960px) {
-      width: 35rem;
+     
     }
   }
 `;
