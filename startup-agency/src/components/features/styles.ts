@@ -31,6 +31,7 @@ export const Card = styled.div`
   padding: 1rem;
   margin: 1rem;
   border: 1px solid #000;
+  border-radius: 0.5rem;
   overflow: hidden;
 
   img {

@@ -3,7 +3,7 @@ import Hero from './hero/Hero'
 import TeamGallery from './team-gallery/TeamGallery'
 import ResultsSponsors from './results-sponsors/ResultsSponsors';
 import Features from './features/Features';
-import FunFact from './fun-fact/FunFact';
+import FunFacts from './fun-facts/FunFacts';
 import Services from './services/Services';
 import PricePlans from './pricing-plans/PricePlans';
 import FeedBack from './feedbacks/FeedBack';
@@ -18,7 +18,7 @@ export {
   TeamGallery,
   ResultsSponsors,
   Features,
-  FunFact,
+  FunFacts,
   Services,
   PricePlans,
   FeedBack,

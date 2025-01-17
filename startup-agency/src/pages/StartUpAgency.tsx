@@ -8,7 +8,7 @@ const StartUpAgency = () => {
       <MyComponent.TeamGallery />
       <MyComponent.ResultsSponsors />
       <MyComponent.Features />
-      <MyComponent.FunFact />
+      <MyComponent.FunFacts />
       <MyComponent.Services />
       <MyComponent.PricePlans />
       <MyComponent.FeedBack />
