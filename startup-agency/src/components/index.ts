@@ -1,24 +1,29 @@
 import Navbar from './navbar/Navbar'
 import Hero from './hero/Hero'
-import Services from './services/Services'
-import FunFacts from './fun-facts/FunFacts'
-import Projects from './projects/Projects'
-import WorkProcess from './work-process/WorkProcess'
-import FeedBack from './feedbacks/FeedBack'
-import Team from './team/Team'
-import Contact from './contact-footer/Contact'
-import Footer from './contact-footer/Footer'
-
+import TeamGallery from './team-gallery/TeamGallery'
+import ResultsSponsors from './results-sponsors/ResultsSponsors';
+import Features from './features/Features';
+import FunFact from './fun-fact/FunFact';
+import Services from './services/Services';
+import PricePlans from './pricing-plans/PricePlans';
+import FeedBack from './feedbacks/FeedBack';
+import FAQ from './faq/FAQ';
+import GetInTouch from './get-in-touch/GetInTouch';
+import Contact from './contact-footer/Contact';
+import Footer from './contact-footer/Footer';
 
 export {
   Navbar,
   Hero,
+  TeamGallery,
+  ResultsSponsors,
+  Features,
+  FunFact,
   Services,
-  FunFacts,
-  Projects,
-  WorkProcess,
+  PricePlans,
   FeedBack,
-  Team,
+  FAQ,
+  GetInTouch,
   Contact,
-  Footer,
+  Footer
 }

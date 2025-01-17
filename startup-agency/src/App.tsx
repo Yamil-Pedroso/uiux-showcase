@@ -1,14 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import DesignAgency from "./pages/DesignAgency"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "./styles/GlobalStyles";
+import StartUpAgency from "./pages/StartUpAgency";
+import { theme } from "./styles/theme";
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<DesignAgency />} />
-      </Routes>
-    </Router>
-  )
-}
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Router>
+        <Routes>
+          <Route path="/" element={<StartUpAgency />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
+  );
+};
 
-export default App
+export default App;
