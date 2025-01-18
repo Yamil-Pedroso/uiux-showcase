@@ -1,5 +1,6 @@
 import { IconType } from "react-icons";
 import { FaArrowRightLong } from "react-icons/fa6";
+import images from "../assets/images";
 export interface INavLinks {
     id: string;
     item: string;
@@ -11,6 +12,7 @@ export interface ICommonContentProps {
   title?: string;
   description?: string;
   number?: number;
+  price?: number;
   result?: string[];
   icon?: IconType | JSX.Element | React.ReactNode | string;
 }
@@ -156,5 +158,26 @@ export interface ICommonContentProps {
     },
   ];
 
+  const pricePlans: ICommonContentProps[] = [
+    {
+      src: images.personLap,
+      title: "Basic",
+      price: 19.99,
+      result: ["90 mins session duration", "Multiple modes of networking", "Live event engagement", "Pre-set emails", "Real-time data & basic reports"],
+    },
+    {
+      src: images.personLap,
+      title: "Startup",
+      price: 29.99,
+      result: ["Advanced networking modes", "Unlimited session duration", "Custom event branding", "Advanced analytics report", "Leaderboard & gamification"],
+    },
+    {
+      src: images.personLap,
+      title: "Enterprise",
+      price: 46.99,
+      result: ["Advanced networking modes", "Dedicated account manager", "3D event experiences", "Mobile app & website create", "likePersonalization & branding"],
+    },
+  ];
 
-  export { navLinks, teamGallery, sponsorGallery, features, funFacts, services };
+
+  export { navLinks, teamGallery, sponsorGallery, features, funFacts, services, pricePlans };

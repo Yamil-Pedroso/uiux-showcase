@@ -3,8 +3,10 @@ import {
   ServicesWrapper,
   ServicesContent,
   Content,
+  IconWrapper,
 } from "./styles";
 import { services } from "../../types/Types";
+import Planning from "./Planning";
 
 const Services = () => {
   return (
@@ -13,19 +15,26 @@ const Services = () => {
       <ServicesWrapper>
         {/* Services */}
         {services.map((service, index) => (
-          <ServicesContent key={index}>
-            <Content>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-            </Content>
-            <div>
-              {typeof service.icon === "function" && (
-                <service.icon className="arrow-icon" />
-              )}
-            </div>
-          </ServicesContent>
+          <div className="service-box" key={index}>
+            <ServicesContent>
+              <Content>
+                <h3>{service.title}</h3>
+                <div className="service-desc">
+                  <p>{service.description}</p>
+                </div>
+              </Content>
+              <IconWrapper>
+                {typeof service.icon === "function" && (
+                  <service.icon className="arrow-icon" />
+                )}
+              </IconWrapper>
+            </ServicesContent>
+          </div>
         ))}
       </ServicesWrapper>
+
+      {/* Planning */}
+      <Planning />
     </ServicesContainer>
   );
 };
