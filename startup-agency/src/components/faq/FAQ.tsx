@@ -1,9 +1,6 @@
 import {
   FaqContainer,
-  FaqWrapper,
   FaqCardWrapper,
-  FaqCardLeft,
-  FaqCardRight,
   FaqCard,
 } from "./styles";
 import { faq } from "../../types/Types";
