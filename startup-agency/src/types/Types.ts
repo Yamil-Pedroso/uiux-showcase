@@ -113,21 +113,21 @@ const sponsorGallery: ICommonContentProps[] = [
 
 const features: ICommonContentProps[] = [
   {
-    src: "https://img.freepik.com/premium-vector/energized-lady-is-holding-photographs-camera-tourism-subject-dim-white-line-craftsmanship-trendy-style-vector-illustration_174639-70143.jpg?ga=GA1.1.689451841.1699970434&semt=ais_hybrid",
+    src: images.plan,
     alt: "feature-img",
     title: "Reduce Uncertainty",
     description:
       "By adopting and implementing strategies, we not only help survive but also thrive in the face of uncertainty.",
   },
   {
-    src: "https://img.freepik.com/premium-vector/energized-lady-is-holding-photographs-camera-tourism-subject-dim-white-line-craftsmanship-trendy-style-vector-illustration_174639-70143.jpg?ga=GA1.1.689451841.1699970434&semt=ais_hybrid",
+    src: images.plan,
     alt: "feature-img",
     title: "Innovative Ideas",
     description:
       "Our aim is to disrupt existing industries or create entirely new ones with our talents and innovative business ideas.",
   },
   {
-    src: "https://img.freepik.com/premium-vector/energized-lady-is-holding-photographs-camera-tourism-subject-dim-white-line-craftsmanship-trendy-style-vector-illustration_174639-70143.jpg?ga=GA1.1.689451841.1699970434&semt=ais_hybrid",
+    src: images.plan,
     alt: "feature-img",
     title: "Growth Focus",
     description:

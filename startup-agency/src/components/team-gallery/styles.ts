@@ -1,20 +1,19 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const TeamGalleryContainer = styled.div`
-  display: flex;
-    justify-content: center;
-flex-wrap: wrap;
+ // border: 2px solid #000;
 `;
 
 export const CardWrapper = styled.div`
-  
+  position: absolute;
 `;
 
-export const Card = styled.div`
-  width: 20rem;
-  height: 22rem;
+export const Card = styled(motion.div)`
+  width: 27.5625rem;
+  height: 29rem;
   margin: 1rem;
-  border-radius: .6rem;
+  border-radius: 0.6rem;
   border: 10px solid ${({ theme }) => theme.colors.bgLimeClear1};
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
 

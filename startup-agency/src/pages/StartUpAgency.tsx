@@ -1,4 +1,5 @@
 import * as MyComponent from '../components';
+import ScrollUp from '../components/common/scroll-up/ScrollUp';
 
 const StartUpAgency = () => {
   return (
@@ -16,6 +17,7 @@ const StartUpAgency = () => {
       <MyComponent.GetInTouch />
       <MyComponent.Contact />
       <MyComponent.Footer />
+      <ScrollUp />
     </div>
   );
 };

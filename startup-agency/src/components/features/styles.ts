@@ -7,12 +7,17 @@ export const Content = styled.div`
   display: flex;
     justify-content: center;
     flex-direction: column;
+    
   h2 {
-    width: 60rem;
+    width: 50rem;
     font-size: 5rem;
     color: #000;
     margin-bottom: 2rem;
     text-align: left;
+  }
+
+  .card-wrapper {
+    
   }
 `;
 
@@ -28,8 +33,7 @@ export const Card = styled.div`
   height: 25.18rem;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  margin: 1rem;
+  padding: 2rem;
   border: 1px solid #000;
   border-radius: 0.5rem;
   overflow: hidden;

@@ -1,8 +1,33 @@
 import styled from "styled-components";
 
-export const HeroContainer = styled.div``;
+export const HeroContainer = styled.div`
+    margin: 5rem auto;
+    width: 80rem;
+
+    > * {
+        margin: 2rem 0;
+    }
+
+    h2 {
+        font-size: 7.25rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 1.3125rem;
+        font-weight: 400;
+        text-align: center;
+        margin: 2rem 0;
+    }
+`;
 
 export const BtnWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  gap: 1rem;
+
   .btn-hero1 {
     background-color: #ff4613;
     color: #fff;

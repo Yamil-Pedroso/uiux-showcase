@@ -13,7 +13,7 @@ const Features = () => {
       <FeaturesWrapper>
         <Content>
           <h2>Features that set us apart from others</h2>
-          <div className="card" style={{ display: "flex" }}>
+          <div className="card-wrapper" style={{ display: "flex" }}>
             {features.map((item, idx) => {
               return (
                 <Card>
