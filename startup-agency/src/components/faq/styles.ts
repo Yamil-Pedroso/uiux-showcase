@@ -54,7 +54,7 @@ export const FaqCardRight = styled.div`
 export const FaqCard = styled.div`
   display: flex;
   align-items: center;
-    justify-content: space-between;
+  justify-content: space-between;
   width: 35rem;
   height: 3rem;
   padding: 2rem;
@@ -64,16 +64,22 @@ export const FaqCard = styled.div`
     font-size: 1.875rem;
   }
 
-   .answer {
+  .answer {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .hidden {
     display: none;
-   }
+  }
 
-    .arrow-icon {
-        font-size: 2.5rem;
+  .arrow-icon {
+    font-size: 2.5rem;
 
-        &:hover {
-            transform: rotate(180deg);
-            cursor: pointer;
-        }
+    &:hover {
+      cursor: pointer;
     }
+
+  }
 `;

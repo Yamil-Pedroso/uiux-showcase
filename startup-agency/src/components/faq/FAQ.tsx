@@ -1,8 +1,5 @@
-import {
-  FaqContainer,
-  FaqCardWrapper,
-  FaqCard,
-} from "./styles";
+import React, { useState } from "react";
+import { FaqContainer, FaqCardWrapper, FaqCard } from "./styles";
 import { faq } from "../../types/Types";
 
 interface FaqProps {
@@ -10,6 +7,15 @@ interface FaqProps {
 }
 
 const FAQ: React.FC<FaqProps> = ({ id }) => {
+  const [clicked, setClicked] = useState<number | null>(null);
+
+  const handleClick = (index: number) => {
+    if (clicked === index) {
+      return setClicked(null);
+    }
+    setClicked(index);
+  };
+
   return (
     <FaqContainer id={id}>
       <h2>Ask us if you have doubts or questions</h2>
@@ -21,12 +27,21 @@ const FAQ: React.FC<FaqProps> = ({ id }) => {
               <FaqCard key={index}>
                 <div className="content-left">
                   <h3>{item.question}</h3>
-                  <p className="answer">{item.answer}</p>
+                  <p className={clicked === index ? "answer" : "answer hidden"}>
+                    {item.answer}
+                  </p>
                 </div>
-
-                {typeof item.icon === "function" && (
-                  <item.icon className="arrow-icon" />
-                )}
+                <div>
+                  {typeof item.icon === "function" && (
+                    <item.icon
+                      style={{ transform: clicked === index ? "rotate(180deg)" : "" }}
+                      className={
+                        clicked === index ? "arrow-icon" : "arrow-icon rotated"
+                      }
+                      onClick={() => handleClick(index)}
+                    />
+                  )}
+                </div>
               </FaqCard>
             ))
             .slice(0, 3)}
@@ -37,12 +52,18 @@ const FAQ: React.FC<FaqProps> = ({ id }) => {
               <FaqCard key={index}>
                 <div className="content-right">
                   <h3>{item.question}</h3>
-                  <p className="answer">{item.answer}</p>
+                  <p className={clicked === index ? "answer" : "answer hidden"}>
+                    {item.answer}
+                  </p>
                 </div>
-
-                {typeof item.icon === "function" && (
-                  <item.icon className="arrow-icon" />
-                )}
+                <div>
+                  {typeof item.icon === "function" && (
+                    <item.icon
+                      className="arrow-icon"
+                      onClick={() => handleClick(index)}
+                    />
+                  )}
+                </div>
               </FaqCard>
             ))
             .slice(3, 6)}

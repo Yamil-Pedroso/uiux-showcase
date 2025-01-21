@@ -44,7 +44,7 @@ const FeedBack: React.FC<FeedBackProps> = ({ id }) => {
 
   return (
     <FeedbacksContainer id={id}>
-      <FeedbacksWrapper>
+      <FeedbacksWrapper >
         <LeftSide style={{ position: isSticky ? "sticky" : "relative" }}>
           <Text>
             <h2>Appreciation from our loving clients</h2>
