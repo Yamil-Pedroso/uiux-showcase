@@ -11,6 +11,7 @@ import FAQ from './faq/FAQ';
 import GetInTouch from './get-in-touch/GetInTouch';
 import Contact from './contact-footer/Contact';
 import Footer from './contact-footer/Footer';
+import AppTour from './app-tour/AppTour';
 
 export {
   Navbar,
@@ -25,5 +26,6 @@ export {
   FAQ,
   GetInTouch,
   Contact,
-  Footer
+  Footer,
+  AppTour
 }

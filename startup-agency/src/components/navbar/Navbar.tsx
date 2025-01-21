@@ -12,7 +12,11 @@ import { navLinks } from "../../types/Types";
 import Button from "../common/buttons/Button";
 import { IoMenu, IoCloseSharp } from "react-icons/io5";
 
-const Navbar = () => {
+interface NavbarProps {
+  id?: string;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ id }) => {
   const [active, setActive] = useState("Home");
   const [showMenu, setShowMenu] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -52,7 +56,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <HeaderContainer>
+    <HeaderContainer id={id}>
       <div>
         <h1>Logo</h1>
       </div>

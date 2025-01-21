@@ -6,9 +6,13 @@ import {
 import Marquee from "react-marquee-slider";
 import { sponsorGallery } from "../../types/Types";
 
-const ResultsSponsors = () => {
+interface ResultsSponsorsProps {
+  id?: string;
+}
+
+const ResultsSponsors: React.FC<ResultsSponsorsProps> = ({ id }) => {
   return (
-    <ResultsSponsorsContainer>
+    <ResultsSponsorsContainer id={id}>
       <ResultsSponsorsWrapper>
         <h2>
           We’ve helped over 200+ startups grow their business around the world

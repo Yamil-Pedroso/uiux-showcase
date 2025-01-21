@@ -184,7 +184,7 @@ const services: ICommonContentProps[] = [
 
 const pricePlans: ICommonContentProps[] = [
   {
-    src: images.personLap,
+    src: images.choosePlan,
     title: "Basic",
     price: 19.99,
     result: [
@@ -196,7 +196,7 @@ const pricePlans: ICommonContentProps[] = [
     ],
   },
   {
-    src: images.personLap,
+    src: images.choosePlan,
     title: "Startup",
     price: 29.99,
     result: [
@@ -208,7 +208,7 @@ const pricePlans: ICommonContentProps[] = [
     ],
   },
   {
-    src: images.personLap,
+    src: images.choosePlan,
     title: "Enterprise",
     price: 46.99,
     result: [

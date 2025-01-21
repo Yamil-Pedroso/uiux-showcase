@@ -5,9 +5,13 @@ import {
 } from "./styles";
 import { faq } from "../../types/Types";
 
-const FAQ = () => {
+interface FaqProps {
+  id?: string;
+}
+
+const FAQ: React.FC<FaqProps> = ({ id }) => {
   return (
-    <FaqContainer>
+    <FaqContainer id={id}>
       <h2>Ask us if you have doubts or questions</h2>
 
       <FaqCardWrapper>

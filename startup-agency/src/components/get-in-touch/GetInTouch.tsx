@@ -1,9 +1,13 @@
 import {  GetInTouchContainer, GetInTouchWrapper } from './styles'
 import Button from '../common/buttons/Button'
 
-const GetInTouch = () => {
+interface GetInTouchProps {
+   id?: string;
+ }
+
+const GetInTouch: React.FC<GetInTouchProps> = ({ id }) => {
   return (
-    <GetInTouchContainer>
+    <GetInTouchContainer id={id}>
        <GetInTouchWrapper>
           <h2>Join us on your path to future success</h2>
 

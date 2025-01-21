@@ -3,9 +3,13 @@ import { pricePlans } from "../../types/Types";
 import { AiFillLike } from "react-icons/ai";
 import Button from "../common/buttons/Button";
 
-const PricePlans = () => {
+interface PricePlansProps {
+  id?: string;
+}
+
+const PricePlans: React.FC<PricePlansProps> = ({ id }) => {
   return (
-    <PricingPlansContainer>
+    <PricingPlansContainer id={id}>
       <h2>Choose the plan that fits your needs</h2>
       <PlansWrapper>
         {pricePlans.map((plan, idx) => {
@@ -15,7 +19,7 @@ const PricePlans = () => {
               <h3>{plan.title}</h3>
               <h3>CHF{plan.price}</h3>
 
-              <hr style={{ 
+              <hr style={{
                  width: "100%",
                   height: "1px",
                   backgroundColor: "#000",

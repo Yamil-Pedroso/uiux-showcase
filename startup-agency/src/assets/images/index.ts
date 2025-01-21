@@ -1,5 +1,6 @@
 import personLap from './svg/person-lap.svg'
 import plan from './png/plan.png'
+import choosePlan from './png/choose-plan.png'
 
 export interface IImage {
     [key: string]: string
@@ -7,7 +8,8 @@ export interface IImage {
 
 const images: IImage = {
     personLap,
-    plan
+    plan,
+    choosePlan
 }
 
 export default images

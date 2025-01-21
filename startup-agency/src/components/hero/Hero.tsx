@@ -1,9 +1,13 @@
 import { HeroContainer, BtnWrapper } from "./styles";
 import Button from "../common/buttons/Button";
 
-const Hero = () => {
+interface HeroProps {
+  id?: string;
+}
+
+const Hero: React.FC<HeroProps> = ({ id }) => {
   return (
-    <HeroContainer id="home">
+    <HeroContainer id={id}>
       <h2>Start your business growth journey with us</h2>
       <h3>
         We believe in the power of innovation and are passionate about helping

@@ -8,9 +8,13 @@ import {
 import { services } from "../../types/Types";
 import Planning from "./Planning";
 
-const Services = () => {
+interface ServicesProps {
+  id?: string;
+}
+
+const Services: React.FC<ServicesProps> = ({ id }) => {
   return (
-    <ServicesContainer>
+    <ServicesContainer id={id}>
       <h2>Services to increase chances of success</h2>
       <ServicesWrapper>
         {/* Services */}

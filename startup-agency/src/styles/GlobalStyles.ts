@@ -10,10 +10,15 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.mainBackground};
     font-family: "Krona One", sans-serif;
     font-weight: 400;
-    overflow-x: hidden !important;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: "Krona One", sans-serif;
   }
+
+  #root {
+  position: relative; /* Asegura que los hijos puedan desplazarse */
+  overflow: visible; /* Permite scroll en los hijos si es necesario */
+}
 `;

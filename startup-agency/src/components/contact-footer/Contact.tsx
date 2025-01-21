@@ -8,9 +8,13 @@ import {
   FormGroup,
 } from "./styles";
 
-const Contact = () => {
+interface ContactProps {
+  id?: string;
+}
+
+const Contact: React.FC<ContactProps> = ({ id }) => {
   return (
-    <ContactContainer>
+    <ContactContainer id={id}>
       <ContactWrapper>
         <Header>
           <h2>LOGO</h2>

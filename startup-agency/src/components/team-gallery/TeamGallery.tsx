@@ -1,9 +1,13 @@
 import { TeamGalleryContainer, CardWrapper, Card } from "./styles";
 import { teamGallery } from "../../types/Types";
 
-const TeamGallery = () => {
+interface TeamGalleryProps {
+  id?: string;
+}
+
+const TeamGallery: React.FC<TeamGalleryProps> = ({ id }) => {
   return (
-    <TeamGalleryContainer>
+    <TeamGalleryContainer id={id}>
       <div
         style={{
           display: "flex",

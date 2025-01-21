@@ -14,7 +14,11 @@ import {
 import { testimonials } from "../../types/Types";
 import { FaStar } from "react-icons/fa";
 
-const FeedBack = () => {
+interface FeedBackProps {
+  id?: string;
+}
+
+const FeedBack: React.FC<FeedBackProps> = ({ id }) => {
   const lastCardRef = useRef(null);
   const [isSticky, setIsSticky] = useState(true);
 
@@ -39,7 +43,7 @@ const FeedBack = () => {
   }, []);
 
   return (
-    <FeedbacksContainer>
+    <FeedbacksContainer id={id}>
       <FeedbacksWrapper>
         <LeftSide style={{ position: isSticky ? "sticky" : "relative" }}>
           <Text>

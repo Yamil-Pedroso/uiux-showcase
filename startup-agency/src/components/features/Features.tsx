@@ -7,9 +7,13 @@ import {
 } from "./styles";
 import { features } from "../../types/Types";
 
-const Features = () => {
+interface FeaturesProps {
+  id?: string;
+}
+
+const Features: React.FC<FeaturesProps> = ({ id }) => {
   return (
-    <FeaturesContainer>
+    <FeaturesContainer id={id}>
       <FeaturesWrapper>
         <Content>
           <h2>Features that set us apart from others</h2>

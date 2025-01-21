@@ -12,9 +12,13 @@ import {
 } from "./styles";
 import { funFacts } from "../../types/Types";
 
-const FunFacts = () => {
+interface FunFactsProps {
+  id?: string;
+}
+
+const FunFacts: React.FC<FunFactsProps> = ({ id }) => {
   return (
-    <FunFactsContainer>
+    <FunFactsContainer id={id}>
       <FunFactsWrapper>
         <LeftSide>
           <CardWrapper>

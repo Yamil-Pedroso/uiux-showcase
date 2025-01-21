@@ -7,10 +7,14 @@ import {
 } from "./styles";
 import { FaTwitter, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
-const Footer = () => {
+interface FooterProps {
+  id?: string;
+}
+
+const Footer: React.FC<FooterProps> = ({ id }) => {
   const year = new Date().getFullYear();
   return (
-    <FooterContainer>
+    <FooterContainer id={id}>
       <FooterWrapper>
         <FooterLeft>
           <p>&copy; {year}, All Rights Reserved by YamNextGen</p>
