@@ -10,27 +10,35 @@ export const FunFactsContainer = styled.div`
 export const FunFactsWrapper = styled.div`
   display: flex;
   justify-content: center;
-  gap: 5.5rem;
 `;
 
-export const LeftSide = styled.div``;
+export const LeftSide = styled.div`
+  width: 45rem;
+  margin-top: 2rem;
+`;
 
-export const CardWrapper = styled.div``;
+export const CardWrapper = styled.div`
+  position: relative;
+`;
 
 export const Card = styled.div`
-  width: 25.4rem;
-  height: 25.18rem;
+  width: 31.25rem;
+  height: 32.8125rem;
   display: flex;
   flex-direction: column;
-  margin: 1rem;
-  border: 8px solid ${({ theme }) => theme.colors.bgLimeClear1};
+  border: 10px solid ${({ theme }) => theme.colors.bgLimeClear1};
   border-radius: 0.5rem;
   overflow: hidden;
+  position: absolute;
+  top: -6rem;
+  left: 5rem;
+  transform: rotate(-12deg);
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.8) contrast(1.2);
   }
 `;
 
@@ -53,8 +61,17 @@ export const ResultContentWrapper = styled.div`
   .desc {
     font-size: 1.3125rem;
     line-height: 2rem;
-    margin-top: 1rem;
   }
+`;
+
+export const Content = styled.div`
+   > * {
+        margin-bottom: 0;
+   }
+
+   p {
+      width: 45rem;
+   }
 `;
 
 export const Result = styled.div`
@@ -73,7 +90,7 @@ export const ResultContent = styled.div`
 
     h2 {
         font-size: 5rem;
-       
+        margin-top: 2rem;
     }
 
     p {

@@ -12,7 +12,7 @@ export interface ICommonContentProps {
   alt?: string;
   title?: string;
   description?: string;
-  number?: number;
+  number?: number[];
   price?: number;
   question?: string;
   answer?: string;
@@ -140,11 +140,11 @@ const funFacts: ICommonContentProps[] = [
     title: "We help empower visionary founders",
     description:
       "We provide comprehensive support, guidance to early stage startups & entrepreneurs. Our mission is to help transform breakthrough ideas into successful and sustainable businesses.",
-    number: 0,
+    number: [ 15, 84, 20 ],
     result: [
       "Years of experience",
       "Active monthly users",
-      "Project completed",
+      "Projects completed",
     ],
   },
 ];
