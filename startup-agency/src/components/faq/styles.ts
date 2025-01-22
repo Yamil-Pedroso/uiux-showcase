@@ -53,33 +53,53 @@ export const FaqCardRight = styled.div`
 
 export const FaqCard = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   width: 35rem;
-  height: 3rem;
-  padding: 2rem;
+  padding: 2rem 2rem;
   background-color: #ebeae4;
+  margin: 1rem 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
 
   h3 {
     font-size: 1.875rem;
+    margin: 0;
+  }
+
+  .answer-wrapper {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .answer-wrapper.active {
+    max-height: 100rem;
   }
 
   .answer {
     font-size: 1.5rem;
     margin-top: 1rem;
-    transition: all 0.3s ease;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
 
-  .hidden {
-    display: none;
+  .answer-wrapper.active .answer {
+    opacity: 1;
   }
 
   .arrow-icon {
     font-size: 2.5rem;
+    cursor: pointer;
+    align-self: flex-end;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
 
-    &:hover {
-      cursor: pointer;
-    }
-
+  .arrow-icon.rotated {
+    transform: rotate(180deg);
   }
 `;

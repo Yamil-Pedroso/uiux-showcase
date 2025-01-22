@@ -25,22 +25,29 @@ const FAQ: React.FC<FaqProps> = ({ id }) => {
           {faq
             .map((item, index) => (
               <FaqCard key={index}>
-                <div className="content-left">
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    width: "100%",
+                  }}
+                >
                   <h3>{item.question}</h3>
-                  <p className={clicked === index ? "answer" : "answer hidden"}>
-                    {item.answer}
-                  </p>
-                </div>
-                <div>
                   {typeof item.icon === "function" && (
                     <item.icon
-                      style={{ transform: clicked === index ? "rotate(180deg)" : "" }}
-                      className={
-                        clicked === index ? "arrow-icon" : "arrow-icon rotated"
-                      }
+                      className={`arrow-icon ${
+                        clicked === index ? "rotated" : ""
+                      }`}
                       onClick={() => handleClick(index)}
                     />
                   )}
+                </div>
+                <div
+                  className={`answer-wrapper ${
+                    clicked === index ? "active" : ""
+                  }`}
+                >
+                  <p className="answer">{item.answer}</p>
                 </div>
               </FaqCard>
             ))
@@ -50,19 +57,29 @@ const FAQ: React.FC<FaqProps> = ({ id }) => {
           {faq
             .map((item, index) => (
               <FaqCard key={index}>
-                <div className="content-right">
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    width: "100%",
+                  }}
+                >
                   <h3>{item.question}</h3>
-                  <p className={clicked === index ? "answer" : "answer hidden"}>
-                    {item.answer}
-                  </p>
-                </div>
-                <div>
                   {typeof item.icon === "function" && (
                     <item.icon
-                      className="arrow-icon"
+                      className={`arrow-icon ${
+                        clicked === index ? "rotated" : ""
+                      }`}
                       onClick={() => handleClick(index)}
                     />
                   )}
+                </div>
+                <div
+                  className={`answer-wrapper ${
+                    clicked === index ? "active" : ""
+                  }`}
+                >
+                  <p className="answer">{item.answer}</p>
                 </div>
               </FaqCard>
             ))
