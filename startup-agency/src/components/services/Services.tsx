@@ -7,6 +7,7 @@ import {
 } from "./styles";
 import { services } from "../../types/Types";
 import Planning from "./Planning";
+import images from "../../assets/images";
 
 interface ServicesProps {
   id?: string;
@@ -36,9 +37,11 @@ const Services: React.FC<ServicesProps> = ({ id }) => {
           </div>
         ))}
       </ServicesWrapper>
+      <img className="deco2" src={images.deco2} alt="services" />
 
       {/* Planning */}
       <Planning />
+
     </ServicesContainer>
   );
 };

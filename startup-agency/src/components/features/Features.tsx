@@ -7,6 +7,7 @@ import {
 } from "./styles";
 import { features } from "../../types/Types";
 import { motion } from "framer-motion";
+import images from "../../assets/images";
 
 interface FeaturesProps {
   id?: string;
@@ -58,6 +59,8 @@ const Features: React.FC<FeaturesProps> = ({ id }) => {
           </motion.div>
         </Content>
       </FeaturesWrapper>
+
+      <img className="deco3" src={images.deco3} alt="features" />
     </FeaturesContainer>
   );
 };

@@ -6,17 +6,27 @@ export const PricingPlansContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  position: relative;
+
   h2 {
     font-size: 5rem;
     font-weight: bold;
     width: 50rem;
     text-align: center;
   }
+
+  .deco4 {
+    position: absolute;
+    top: 0rem;
+    right: 8rem;
+    width: 18rem;
+  }
 `;
 
 export const PlansWrapper = styled.div`
   display: flex;
   gap: 2rem;
+  margin-top: 1rem;
 `;
 
 export const PlansCard = styled.div`

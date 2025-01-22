@@ -6,11 +6,20 @@ export const ServicesContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  position: relative;
+
   h2 {
     font-size: 5rem;
     font-weight: bold;
-    width: 50%;
+    width: 50rem;
     text-align: center;
+  }
+
+  .deco2 {
+    position: absolute;
+    top: 6rem;
+    left: 10rem;
+    width: 8rem;
   }
 `;
 

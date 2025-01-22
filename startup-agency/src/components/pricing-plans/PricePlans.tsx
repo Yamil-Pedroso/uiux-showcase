@@ -9,6 +9,7 @@ import { pricePlans } from "../../types/Types";
 import { AiFillLike } from "react-icons/ai";
 import Button from "../common/buttons/Button";
 import { motion } from "framer-motion";
+import images from "../../assets/images";
 interface PricePlansProps {
   id?: string;
 }
@@ -77,6 +78,8 @@ const PricePlans: React.FC<PricePlansProps> = ({ id }) => {
           );
         })}
       </PlansWrapper>
+
+      <img className="deco4" src={images.deco4} alt="pricing" />
     </PricingPlansContainer>
   );
 };

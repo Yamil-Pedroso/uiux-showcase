@@ -7,6 +7,21 @@ export const GetInTouchContainer = styled.div`
   align-items: center;
   background-color: #1b1b1b;
   width: 95%;
+  position: relative;
+
+  .deco5 {
+    position: absolute;
+    top: -3.5rem;
+    right: 10rem;
+    width: 8rem;
+  }
+
+  .deco6 {
+    position: absolute;
+    top: 18rem;
+    left: 4rem;
+    width: 23rem;
+  }
 `;
 
 export const GetInTouchWrapper = styled.div`

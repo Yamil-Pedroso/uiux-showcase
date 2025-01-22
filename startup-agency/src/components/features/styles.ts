@@ -1,6 +1,15 @@
 import styled from "styled-components";
 
 export const FeaturesContainer = styled.div`
+   position: relative;
+
+  .deco3 {
+    position: absolute;
+    bottom: -18rem;
+    right: 0;
+    width: 22rem;
+    transform: rotate(70deg) translateY(10rem);
+  }
 `;
 
 export const Content = styled.div`
@@ -34,7 +43,7 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  border: 1px solid #000;
+  border: 3px solid #1b1b1b;
   border-radius: 0.5rem;
   overflow: hidden;
   margin: 1rem;

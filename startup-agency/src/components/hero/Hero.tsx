@@ -1,6 +1,7 @@
 import { HeroContainer, BtnWrapper } from "./styles";
 import Button from "../common/buttons/Button";
 import { motion } from "framer-motion";
+import images from "../../assets/images";
 
 interface HeroProps {
   id?: string;
@@ -54,6 +55,9 @@ const Hero: React.FC<HeroProps> = ({ id }) => {
           Explore Our Services
         </Button>
       </BtnWrapper>
+
+      <img className="deco1" src={images.deco1} alt="hero" />
+      <img className="deco2" src={images.deco2} alt="hero" />
     </HeroContainer>
   );
 };

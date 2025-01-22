@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const HeroContainer = styled.div`
-    margin: 5rem auto;
+    margin: 7rem auto;
     width: 80rem;
+    position: relative;
 
     > * {
         margin: 2rem 0;
@@ -19,6 +20,20 @@ export const HeroContainer = styled.div`
         font-weight: 400;
         text-align: center;
         margin: 2rem 0;
+    }
+
+    .deco1 {
+        position: absolute;
+        top: 12rem;
+        left: -12rem;
+        width: 25rem;
+    }
+
+    .deco2 {
+        position: absolute;
+        top: -5rem;
+        right: -6rem;
+        width: 8rem;
     }
 `;
 

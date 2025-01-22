@@ -1,5 +1,6 @@
 import {  GetInTouchContainer, GetInTouchWrapper } from './styles'
 import Button from '../common/buttons/Button'
+import images from '../../assets/images'
 
 interface GetInTouchProps {
    id?: string;
@@ -24,6 +25,9 @@ const GetInTouch: React.FC<GetInTouchProps> = ({ id }) => {
              Contact Us
           </Button>
        </GetInTouchWrapper>
+
+        <img className='deco5' src={images.deco5} alt='get in touch' />
+        <img className='deco6' src={images.deco6} alt='get in touch' />
     </GetInTouchContainer>
   )
 }
