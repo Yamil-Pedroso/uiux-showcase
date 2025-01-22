@@ -1,17 +1,29 @@
-import { Btn } from './styles'
-interface IButton {
-  title?: string
-  className?: string
-  children?: React.ReactNode
-  style?: React.CSSProperties
+import React, { forwardRef } from "react";
+import { Btn } from "./styles";
+import { motion } from "framer-motion";
+
+interface IButton extends React.ComponentPropsWithoutRef<typeof motion.button> {
+  title?: string;
+  className?: string;
+  children?: React.ReactNode;
+  style?: React.CSSProperties;
 }
 
-const Button: React.FC<IButton> = ({ className, children, style }) => {
-  return (
-    <Btn className={className} style={style}>
-      {children}
-    </Btn>
-  )
-}
+const Button = forwardRef<HTMLButtonElement, IButton>(
+  ({ className, children, style, ...props }, ref) => {
+    return (
+      <Btn
+        className={className}
+        style={style}
+        ref={ref} // Ensure ref is passed correctly
+        {...props}
+      >
+        {children}
+      </Btn>
+    );
+  }
+);
 
-export default Button
+Button.displayName = "Button"; // Set displayName for better debugging
+
+export default Button;

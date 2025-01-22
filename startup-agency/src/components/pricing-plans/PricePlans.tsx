@@ -8,7 +8,7 @@ import {
 import { pricePlans } from "../../types/Types";
 import { AiFillLike } from "react-icons/ai";
 import Button from "../common/buttons/Button";
-
+import { motion } from "framer-motion";
 interface PricePlansProps {
   id?: string;
 }
@@ -17,10 +17,34 @@ const PricePlans: React.FC<PricePlansProps> = ({ id }) => {
   return (
     <PricingPlansContainer id={id}>
       <h2>Simple pricing plans that save you money</h2>
-      <PlansWrapper>
+      <PlansWrapper
+        as={motion.div}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.5 }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: {
+              staggerChildren: 0.5,
+              type: "spring",
+              stiffness: 80,
+              damping: 20,
+            },
+          },
+        }}
+      >
         {pricePlans.map((plan, idx) => {
           return (
-            <PlansCard key={idx}>
+            <PlansCard
+              as={motion.div}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              key={idx}
+            >
               <Content>
                 <img src={plan.src} alt={plan.alt} />
                 <h3 className="title">{plan.title}</h3>

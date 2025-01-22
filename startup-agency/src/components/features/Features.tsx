@@ -6,6 +6,7 @@ import {
   Content,
 } from "./styles";
 import { features } from "../../types/Types";
+import { motion } from "framer-motion";
 
 interface FeaturesProps {
   id?: string;
@@ -17,10 +18,34 @@ const Features: React.FC<FeaturesProps> = ({ id }) => {
       <FeaturesWrapper>
         <Content>
           <h2>Features that set us apart from others</h2>
-          <div className="card-wrapper" style={{ display: "flex" }}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.5 }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.5,
+                  type: "spring",
+                  stiffness: 80,
+                  damping: 20,
+                },
+              },
+            }}
+            className="card-wrapper"
+            style={{ display: "flex" }}
+          >
             {features.map((item, idx) => {
               return (
-                <Card>
+                <Card
+                  as={motion.div}
+                  variants={{
+                    hidden: { opacity: 0, y: 30 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                >
                   <img key={idx} src={item.src} alt={item.alt} />
 
                   <Text>
@@ -30,7 +55,7 @@ const Features: React.FC<FeaturesProps> = ({ id }) => {
                 </Card>
               );
             })}
-          </div>
+          </motion.div>
         </Content>
       </FeaturesWrapper>
     </FeaturesContainer>

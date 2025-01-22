@@ -13,6 +13,7 @@ import {
   Content,
 } from "./styles";
 import { funFacts } from "../../types/Types";
+import { motion } from "framer-motion";
 
 interface FunFactsProps {
   id?: string;
@@ -118,7 +119,20 @@ const FunFacts: React.FC<FunFactsProps> = ({ id }) => {
       <FunFactsWrapper>
         <LeftSide>
           <CardWrapper>
-            <Card>
+            <Card
+                as={motion.div}
+                initial={{ rotate: 45 }} // Posición inicial inclinada hacia arriba
+                whileInView={{ rotate: -5 }} // Estado final bien posicionado
+                viewport={{ once: false, amount: 0.5 }} // Controla cuándo se activa la animación
+                transition={{
+                  type: "spring",
+                  stiffness: 80,
+                  damping: 15,
+                }}
+                style={{
+                  transformOrigin: "top left", // Establece el pivote en la esquina superior izquierda
+                }}
+            >
               <img
                 src="https://img.freepik.com/free-photo/coworkers-team-working-brainstorming-concept_329181-12060.jpg?ga=GA1.1.689451841.1699970434&semt=ais_hybrid "
                 alt="team member"

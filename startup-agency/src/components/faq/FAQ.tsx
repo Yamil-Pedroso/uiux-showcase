@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaqContainer, FaqCardWrapper, FaqCard } from "./styles";
 import { faq } from "../../types/Types";
-
+import { motion } from "framer-motion";
 interface FaqProps {
   id?: string;
 }
@@ -20,11 +20,35 @@ const FAQ: React.FC<FaqProps> = ({ id }) => {
     <FaqContainer id={id}>
       <h2>Ask us if you have doubts or questions</h2>
 
-      <FaqCardWrapper>
-        <div style={{ display: "flex", gap: "2rem", flexDirection: "column" }}>
+      <FaqCardWrapper
+        as={motion.div}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.5 }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: {
+              staggerChildren: 0.2,
+              type: "spring",
+              stiffness: 20,
+              damping: 20,
+            },
+          },
+        }}
+      >
+        <div style={{ display: "flex", gap: "1rem", flexDirection: "column" }}>
           {faq
             .map((item, index) => (
-              <FaqCard key={index}>
+              <FaqCard
+                as={motion.div}
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                key={index}
+              >
                 <div
                   style={{
                     display: "flex",
@@ -53,10 +77,17 @@ const FAQ: React.FC<FaqProps> = ({ id }) => {
             ))
             .slice(0, 3)}
         </div>
-        <div style={{ display: "flex", gap: "2rem", flexDirection: "column" }}>
+        <div style={{ display: "flex", gap: "1rem", flexDirection: "column" }}>
           {faq
             .map((item, index) => (
-              <FaqCard key={index}>
+              <FaqCard
+                as={motion.div}
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                key={index}
+              >
                 <div
                   style={{
                     display: "flex",

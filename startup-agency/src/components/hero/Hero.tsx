@@ -1,5 +1,6 @@
 import { HeroContainer, BtnWrapper } from "./styles";
 import Button from "../common/buttons/Button";
+import { motion } from "framer-motion";
 
 interface HeroProps {
   id?: string;
@@ -16,13 +17,42 @@ const Hero: React.FC<HeroProps> = ({ id }) => {
         to early stage startups.
       </h3>
 
-      <BtnWrapper>
+      <BtnWrapper
+        as={motion.div}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.5 }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: {
+              staggerChildren: 0.5,
+              type: "spring",
+              stiffness: 80,
+              damping: 20,
+            },
+          },
+        }}
+      >
         <Button
-           className="btn-hero1"
-          >Get in Touch</Button>
+          variants={{
+            hidden: { opacity: 0, y: 30 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          className="btn-hero1"
+        >
+          Get in Touch
+        </Button>
         <Button
-            className="btn-hero2"
-        >Explore Our Services</Button>
+          variants={{
+            hidden: { opacity: 0, y: 30 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          className="btn-hero2"
+        >
+          Explore Our Services
+        </Button>
       </BtnWrapper>
     </HeroContainer>
   );
