@@ -13,11 +13,18 @@ interface ContactProps {
 }
 
 const Contact: React.FC<ContactProps> = ({ id }) => {
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   return (
     <ContactContainer id={id}>
       <ContactWrapper>
         <Header>
-          <h2>LOGO</h2>
+          <h2
+            onClick={handleScrollToTop}
+            style={{ cursor: "pointer" }}
+          >LOGO</h2>
           <p>
             We are a branding agency that digitally works to help companies
             grow. We have a successful track record of working with various

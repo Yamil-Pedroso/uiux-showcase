@@ -26,14 +26,14 @@ const Tour: React.FC = () => {
 
   const steps: Step[] = [
     {
-      target: "div#navbar",
+      target: "div#home",
       content: "This is the navigation menu.",
-      position: { top: -60, left: 0 },
+      position: { top: -280, left: 0 },
     },
     {
       target: "div#hero",
       content: "This is the main header of the page.",
-      position: { top: 20, left: 0 },
+      position: { top: 0, left: 0 },
     },
     {
       target: "div#team-gallery",
@@ -43,7 +43,7 @@ const Tour: React.FC = () => {
     {
       target: "div#results-sponsors",
       content: "These are the results and sponsors.",
-      position: { top: -70, left: -20 },
+      position: { top: -100, left: -20 },
     },
     {
       target: "div#features",
@@ -83,12 +83,12 @@ const Tour: React.FC = () => {
     {
       target: "div#contact",
       content: "Contact information.",
-      position: { top: -40, left: 0 },
+      position: { top: -300, left: 0 },
     },
     {
       target: "div#footer",
       content: "This is the footer.",
-      position: { top: -400, left: 0 },
+      position: { top: -500, left: 0 },
     },
   ];
 

@@ -30,8 +30,11 @@ export interface ITestimonialProps {
 
 const navLinks: INavLinks[] = [
   { id: "home", item: "Home" },
-  { id: "about", item: "About Us" },
-  { id: "blog", item: "Blog" },
+  { id: "features", item: "Features" },
+  { id: "services", item: "Services" },
+  { id: "price-plans", item: "Plans" },
+  { id: "feedback", item: "Testimonials" },
+  { id: "faq", item: "FAQ" },
   { id: "contact", item: "Contact Us" },
 ];
 

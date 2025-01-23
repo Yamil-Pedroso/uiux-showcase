@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeroContainer = styled.div`
-    margin: 7rem auto;
+    margin: 12rem auto;
     width: 80rem;
     position: relative;
 

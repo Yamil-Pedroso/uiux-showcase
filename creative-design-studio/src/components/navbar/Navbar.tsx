@@ -52,8 +52,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <HeaderContainer>
-       
+    <HeaderContainer id="home">
           <div>
             <h1>Logo</h1>
           </div>

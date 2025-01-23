@@ -8,7 +8,7 @@ const StartUpAgency = () => {
 
   return (
     <div>
-      <MyComponent.Navbar id="navbar" />
+      <MyComponent.Navbar id="home" />
       <MyComponent.Hero id="hero" />
       <MyComponent.TeamGallery id="team-gallery" />
       <MyComponent.ResultsSponsors id="results-sponsors" />

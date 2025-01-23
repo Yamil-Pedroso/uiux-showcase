@@ -6,7 +6,10 @@ export const HeaderContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  color: #000;
+  background-color: ${({ theme }) => theme.colors.bgBlack};
+  color: ${({ theme }) => theme.colors.colorLimeClear};
+  position: fixed;
+  top: 0;
   z-index: 1;
 
   @media (max-width: 1450px) {
@@ -47,7 +50,7 @@ export const Li = styled.li`
 `;
 
 export const MyLink = styled.a`
-  color: #000;
+  color: ${({ theme }) => theme.colors.colorLimeClear};
   text-decoration: none;
   font-family: "Inter", sans-serif;
   font-weight: bold;
@@ -62,7 +65,7 @@ export const BtnWrapper = styled.div`
 
   .start-btn {
     background-color: #000;
-    color: #fff;
+    color: ${({ theme }) => theme.colors.colorLimeClear};
     border: none;
     padding: 1rem 2rem;
     font-size: 1rem;
