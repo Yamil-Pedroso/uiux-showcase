@@ -1,4 +1,3 @@
-
 import * as MyComponent from '../components';
 import ScrollUp from '../components/common/scroll-up/ScrollUp';
 

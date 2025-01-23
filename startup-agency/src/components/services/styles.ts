@@ -20,6 +20,19 @@ export const ServicesContainer = styled.div`
     top: 6rem;
     left: 10rem;
     width: 8rem;
+    animation: floating 3s ease-in-out infinite alternate;
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
   }
 `;
 

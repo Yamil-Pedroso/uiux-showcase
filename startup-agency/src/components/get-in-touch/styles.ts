@@ -14,6 +14,18 @@ export const GetInTouchContainer = styled.div`
     top: -3.5rem;
     right: 10rem;
     width: 8rem;
+    animation: rotate 6s linear infinite;
+    
+    @keyframes rotate {
+        from {
+            transform: rotate(0);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+      }
+    
+    
   }
 
   .deco6 {
@@ -21,6 +33,20 @@ export const GetInTouchContainer = styled.div`
     top: 18rem;
     left: 4rem;
     width: 23rem;
+
+    animation: moveLeftRight 3s ease-in-out infinite alternate;
+
+@keyframes moveLeftRight {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-2rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+  }
   }
 `;
 

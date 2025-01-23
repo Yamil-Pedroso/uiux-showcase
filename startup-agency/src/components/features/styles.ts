@@ -6,9 +6,22 @@ export const FeaturesContainer = styled.div`
   .deco3 {
     position: absolute;
     bottom: -18rem;
-    right: 0;
+    right: 5rem;
     width: 22rem;
     transform: rotate(70deg) translateY(10rem);
+    animation: moveLeftRight 3s ease-in-out infinite alternate;
+
+        @keyframes moveLeftRight {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-2rem);
+            }
+            100% {
+                transform: translateX(0);
+            }
+          }
   }
 `;
 

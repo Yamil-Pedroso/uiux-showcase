@@ -20,6 +20,20 @@ export const PricingPlansContainer = styled.div`
     top: 0rem;
     right: 8rem;
     width: 18rem;
+
+    animation: moveLeftRight 3s ease-in-out infinite alternate;
+
+    @keyframes moveLeftRight {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(-2rem);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
   }
 `;
 
@@ -69,7 +83,7 @@ export const PlansCard = styled.div`
 
     li {
       display: flex;
-    
+
       gap: 1rem;
       align-items: center;
       font-size: 1.5rem;
@@ -105,5 +119,4 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
 `;

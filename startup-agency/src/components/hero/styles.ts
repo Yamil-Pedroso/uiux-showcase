@@ -27,6 +27,20 @@ export const HeroContainer = styled.div`
         top: 12rem;
         left: -12rem;
         width: 25rem;
+
+        animation: moveLeftRight 3s ease-in-out infinite alternate;
+
+        @keyframes moveLeftRight {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-2rem);
+            }
+            100% {
+                transform: translateX(0);
+            }
+          }
     }
 
     .deco2 {
@@ -34,6 +48,19 @@ export const HeroContainer = styled.div`
         top: -5rem;
         right: -6rem;
         width: 8rem;
+        animation: floating 2s ease-in-out infinite alternate;
+
+    @keyframes floating {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(0.5rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
     }
 `;
 
