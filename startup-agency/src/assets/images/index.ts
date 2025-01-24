@@ -8,6 +8,7 @@ import deco4 from './svg/deco4.svg'
 import deco5 from './svg/deco5.svg'
 import deco6 from './svg/deco6.svg'
 import toolTipChar from './svg/tooltip-char.svg'
+import charFront from './svg/char-front.svg'
 
 export interface IImage {
     [key: string]: string
@@ -24,6 +25,7 @@ const images: IImage = {
     deco5,
     deco6,
     toolTipChar,
+    charFront,
 }
 
 export default images

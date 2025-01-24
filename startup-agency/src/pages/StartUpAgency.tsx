@@ -1,13 +1,20 @@
+import { useEffect, useState } from 'react';
 import * as MyComponent from '../components';
 import ScrollUp from '../components/common/scroll-up/ScrollUp';
+import ModalNote from '../components/modal-note/ModalNote';
 
 const StartUpAgency = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
+  useEffect(() => {
+    setIsModalOpen(true);
+  }, []);
 
-
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <div>
+      {isModalOpen && <ModalNote onClose={closeModal} />}
       <MyComponent.Navbar id="home" />
       <MyComponent.Hero id="hero" />
       <MyComponent.TeamGallery id="team-gallery" />

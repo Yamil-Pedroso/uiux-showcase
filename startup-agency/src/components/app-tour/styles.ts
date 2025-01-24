@@ -45,7 +45,7 @@ export const AppTourWrapper = styled.div<IAppTourProps>`
   position: absolute;
   top: ${(props) => props.top}px;
   left: ${(props) => props.left}px;
-  z-index: 1000;
+  z-index: 2;
 
   p {
     font-size: 1.2rem;
