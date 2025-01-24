@@ -25,11 +25,18 @@ const Navbar = () => {
   };
 
   const handleClickItem = (
-    event: React.MouseEvent<HTMLAnchorElement>,
+    event: React.MouseEvent<HTMLAnchorElement | HTMLDivElement>,
     item: string
   ) => {
     event.preventDefault();
-    document.getElementById(item)?.scrollIntoView({ behavior: "smooth" });
+    const navbarHeight = document.getElementById("home")?.offsetHeight || 0;
+    const target = document.getElementById(item); 
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop - navbarHeight, // Adjust for the height of the navbar
+        behavior: "smooth",
+      });
+    }
   };
 
   useEffect(() => {
@@ -53,8 +60,12 @@ const Navbar = () => {
 
   return (
     <HeaderContainer id="home">
-          <div>
-            <h1>Logo</h1>
+          <div
+            onClick={(event) => handleClickItem(event, "home")}
+          >
+            <h1
+              style={{ cursor: "pointer" }}
+            >Logo</h1>
           </div>
           <Ul>
             {navLinks.map((link) => (
