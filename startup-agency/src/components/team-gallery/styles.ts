@@ -3,10 +3,22 @@ import { motion } from "framer-motion";
 
 export const TeamGalleryContainer = styled.div`
  // border: 2px solid #000;
+  margin-top: -10rem;
+  width: 59rem;
+  height: 55rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 960px) {
+    width: 40rem;
+    height: 37rem;
+  }
 `;
 
 export const CardWrapper = styled.div`
   position: absolute;
+
 `;
 
 export const Card = styled(motion.div)`
@@ -16,10 +28,27 @@ export const Card = styled(motion.div)`
   border-radius: 0.6rem;
   border: 10px solid ${({ theme }) => theme.colors.bgLimeClear1};
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  @media (max-width: 960px) {
+    margin-top: 0rem;
+    width: 20rem;
+    height: 21rem;
+  }
+
+  @media (max-width: 768px) {
+  
+    width: 15rem;
+    height: 16rem;
+  }
+
+  @media (max-width: 700px) {
+    display: none;
   }
 `;
