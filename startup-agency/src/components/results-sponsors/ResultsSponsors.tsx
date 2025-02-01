@@ -28,12 +28,7 @@ const ResultsSponsors: React.FC<ResultsSponsorsProps> = ({ id }) => {
           {sponsorGallery.map((item, idx) => {
             return (
               <Content key={idx}>
-                <img
-                  key={idx}
-                  src={item.src}
-                  alt={item.alt}
-                  style={{ width: "4.5rem", height: "4.5rem" }}
-                />
+                <img key={idx} src={item.src} alt={item.alt} />
 
                 <span>{item.title}</span>
               </Content>

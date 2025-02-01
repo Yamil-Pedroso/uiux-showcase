@@ -139,7 +139,7 @@ export const MobileMenu = styled(motion.div)`
       right: 1rem;
       top: 1rem;
       cursor: pointer;
-      color: ${({ theme }) => theme.colors.bgBlack};
+      color: ${({ theme }) => theme.colors.colorLimeClear};
     }
   }
 `;

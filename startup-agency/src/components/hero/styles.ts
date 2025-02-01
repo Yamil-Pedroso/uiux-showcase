@@ -153,7 +153,7 @@ export const BtnWrapper = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    width: 100%;
+   
 
     .btn-hero1,
     .btn-hero2 {

@@ -5,20 +5,26 @@ export const TeamGalleryContainer = styled.div`
  // border: 2px solid #000;
   margin-top: -10rem;
   width: 59rem;
-  height: 55rem;
   display: flex;
   align-items: center;
   justify-content: center;
 
   @media (max-width: 960px) {
     width: 40rem;
-    height: 37rem;
+  }
+
+  @media (max-width: 768px) {
+    height: 30rem;
+    margin-left: 2rem;
+  }
+
+  @media (max-width: 700px) {
+    height: 6rem;
   }
 `;
 
 export const CardWrapper = styled.div`
   position: absolute;
-
 `;
 
 export const Card = styled(motion.div)`
@@ -36,14 +42,7 @@ export const Card = styled(motion.div)`
     object-fit: cover;
   }
 
-  @media (max-width: 960px) {
-    margin-top: 0rem;
-    width: 20rem;
-    height: 21rem;
-  }
-
   @media (max-width: 768px) {
-  
     width: 15rem;
     height: 16rem;
   }
