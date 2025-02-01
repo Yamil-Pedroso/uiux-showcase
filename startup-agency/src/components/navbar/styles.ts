@@ -99,7 +99,7 @@ export const MobileMenu = styled(motion.div)`
   display: none;
 
   @media (max-width: 1400px) {
-    background-color: ${({ theme }) => theme.colors.colorLimeClear};
+    background-color: ${({ theme }) => theme.colors.bgBlack};
     width: 22rem;
     height: 100vh;
     position: absolute;
@@ -110,7 +110,7 @@ export const MobileMenu = styled(motion.div)`
     z-index: 2;
 
     h1 {
-      color: ${({ theme }) => theme.colors.bgBlack};
+      color: ${({ theme }) => theme.colors.colorLimeClear};
       margin-left: 2rem;
     }
 
@@ -125,8 +125,12 @@ export const MobileMenu = styled(motion.div)`
       }
 
       a {
-        color: ${({ theme }) => theme.colors.bgBlack};
+        color: ${({ theme }) => theme.colors.colorLimeClear};
         text-decoration: none;
+
+        &:hover {
+          color: #ff4613;
+        }
       }
     }
 
